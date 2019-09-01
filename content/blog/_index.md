@@ -1,6 +1,6 @@
 +++
 title = "Stockholm"
-template = "blog.html"
+template = "sections/blog.html"
 transparent = true
 paginate_by = 10
 +++

@@ -1,4 +1,6 @@
 +++
-title = "Gallery"
-page_template = "gallery.html"
+title = "Stockholm"
+template = "sections/gallery.html"
+transparent = true
+paginate_by = 10
 +++
