@@ -1,0 +1,13 @@
+name = "stockholm"
+description = "A minimalistic theme"
+license = "MIT"
+homepage = ""
+min_version = "0.8.0"
+demo = ""
+
+[extra]
+
+# The theme author info: you!
+[author]
+name = "Mathias Ivar Iversen"
+homepage = ""

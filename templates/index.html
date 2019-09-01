@@ -1,0 +1,20 @@
+{% extends "root.html" %}
+
+{% block content %}
+    <section class="posts">
+        {% set section = get_section(path="blog/posts/_index.md") %}
+        {% for page in paginator.pages %}
+        <article class="post">
+            <h2 class="post-title">
+                <a href="{{ page.permalink }}">
+                    {{ page.title }}
+                </a>
+            </h2>
+            <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
+            {% if page.summary %}
+            <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </section>
+{% endblock content %}
