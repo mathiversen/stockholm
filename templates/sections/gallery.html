@@ -10,9 +10,10 @@
                 </a>
             </h2>
             <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
-            {% if page.summary %}
-            <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
-            {% endif %}
+            {% set asset = page.assets | first %}
+            <a href="{{ page.permalink }}">
+                <img src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}" />
+            </a>
         </article>
         {% endfor %}
     </section>

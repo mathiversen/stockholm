@@ -1,35 +1,33 @@
 {% extends "root.html" %}
 
 {% block content %}
-<section class="blog-posts">
-        {% set section = get_section(path="blog/posts/_index.md") %}
-        {% for page in paginator.pages %}
-        <article class="post">
-            <h2 class="post-title">
+<section class="posts">
+    <ul class="blog-posts">
+        {% set blog_posts = get_section(path="blog/posts/_index.md") %}
+        {% for page in blog_posts.pages | slice(start=0, end=2) %}
+        <li>
+            <p>
+                <strong>{{ page.date | date(format="%Y-%m-%d") }}</strong>
                 <a href="{{ page.permalink }}">
                     {{ page.title }}
                 </a>
-            </h2>
-            <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
-            {% if page.summary %}
-            <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
-            {% endif %}
-        </article>
-        {% endfor %}
-    </section>
-    <section class="gallery-posts">
-        {% for page in paginator.pages %}
-        <article class="post">
-            <h2 class="post-title">
+            </p>
+        </li>
+        {% endfor %}                
+    </ul>
+    <ul class="gallery-posts">
+        {% set gallery_posts = get_section(path="gallery/posts/_index.md") %}
+        {% for page in gallery_posts.pages | slice(start=0, end=2) %}
+        <li>
+            <p>
+                <strong>{{ page.date | date(format="%Y-%m-%d") }}</strong>
                 <a href="{{ page.permalink }}">
                     {{ page.title }}
                 </a>
-            </h2>
-            <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
-            {% if page.summary %}
-            <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
-            {% endif %}
-        </article>
-        {% endfor %}
-    </section>
+            </p>
+        </li>
+        {% endfor %}                
+    </ul>
+</section>
+<nav></nav>
 {% endblock content %}
