@@ -1,0 +1,19 @@
+.gallery {
+    h1 {
+        text-align: center;
+        padding: 4rem;
+    }
+    ul {
+        --spacing: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        @media screen and (min-width: 960px) {
+            grid-gap: 2rem;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

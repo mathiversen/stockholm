@@ -1,0 +1,26 @@
+:root {
+    --base: 18px;
+    font-size: var(--base);
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+@media screen and (min-width: 960px) {
+    #main {
+        padding: 0 2rem;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}

@@ -19,4 +19,9 @@ highlight_code = false
 build_search_index = false
 
 [extra]
-# Put all your custom variables here
+sthml_links = [
+    { url = "/", name = "Home" },
+    { url = "/blog/", name = "Blog" },
+    { url = "/gallery/", name = "Gallery" },
+]
+

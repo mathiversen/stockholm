@@ -1,20 +1,24 @@
 {% extends "root.html" %}
 
+{% block extra_head_css %}
+    <link rel="stylesheet" href="{{ config.base_url }}/gallery.css">
+{% endblock extra_head_css %}
+
 {% block content %}
-    <section class="posts">
-        {% for page in paginator.pages %}
-        <article class="post">
-            <h2 class="post-title">
+    <section class="gallery">
+        <h1>Gallery</h1>
+        <ul>
+            {% for page in paginator.pages %}
+            <li>
+                {% set asset = page.assets | first %}
                 <a href="{{ page.permalink }}">
-                    {{ page.title }}
+                    <img
+                        src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}"
+                        alt="{{ page.title }}"
+                    />
                 </a>
-            </h2>
-            <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
-            {% set asset = page.assets | first %}
-            <a href="{{ page.permalink }}">
-                <img src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}" />
-            </a>
-        </article>
-        {% endfor %}
+            </li>
+            {% endfor %}
+        </ul>
     </section>
 {% endblock content %}
