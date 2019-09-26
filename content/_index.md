@@ -1,5 +1,5 @@
 +++
 title = "Index"
-template = "sections/index.html"
+template = "pages/index.html"
 paginate_by = 2
 +++

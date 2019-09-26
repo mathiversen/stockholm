@@ -1,5 +1,5 @@
 +++
 title = "Stockholm"
-page_template = "pages/post_gallery.html"
+page_template = "pages/gallery_posts.html"
 transparent = true
 +++
