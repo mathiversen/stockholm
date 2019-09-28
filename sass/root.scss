@@ -1,6 +1,11 @@
+@import 'helpers/_.scss';
+
 :root {
-    --base: 18px;
-    font-size: var(--base);
+    --font-size: 18px;
+}
+
+body {
+    font-size: var(--font-size);
 }
 
 @media screen and (min-width: 960px) {

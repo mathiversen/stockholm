@@ -1,0 +1,8 @@
+@import '_variables.scss';
+
+%label-text {
+	font-size: $font;
+	text-decoration: none;
+	text-transform: uppercase;
+	grid-gap: 1rem;
+}
