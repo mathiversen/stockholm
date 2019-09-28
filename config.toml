@@ -20,9 +20,9 @@ build_search_index = false
 
 [extra]
 sthml_links = [
-    { url = "/", name = "Home" },
-    { url = "/text/", name = "Text" },
-    { url = "/pictures/", name = "Pictures" },
-    { url = "/about/", name = "About" },
+    { url = "/", name = "Home", icon = "home" },
+    { url = "/text/", name = "Text", icon = "file-text" },
+    { url = "/pictures/", name = "Pictures", icon = "image" },
+    { url = "/about/", name = "About", icon = "user" },
 ]
 
