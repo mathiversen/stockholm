@@ -1,3 +1,16 @@
 {% import "macros/icons.html" as macro_icon %}
 
-<div>Component {{ macro_icon::icon(name="home") }}</div>
+<!-- NAV -->
+<link rel="stylesheet" href="{{ config.base_url }}/components/nav.css">
+<style>
+
+</style>
+<nav class="nav">            
+    <ul>
+        {% block sidebar_nav %}
+            {% for link in config.extra.nav %}
+                <li><a href="{{link.url}}">{{ macro_icon::icon(name=link.icon) }}{{link.name}}</a></li>
+            {% endfor %}
+        {% endblock sidebar_nav %}
+    </ul>
+</nav>

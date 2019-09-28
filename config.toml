@@ -19,10 +19,10 @@ highlight_code = false
 build_search_index = false
 
 [extra]
-sthml_links = [
-    { url = "$BASE_URL", name = "Home", icon = "home" },
-    { url = "$BASE_URL/text", name = "Text", icon = "file-text" },
-    { url = "$BASE_URL/pictures", name = "Pictures", icon = "image" },
-    { url = "$BASE_URL/about", name = "About", icon = "user" },
+nav = [
+    { url = "/", name = "Home", icon = "home" },
+    { url = "/text", name = "Text", icon = "file-text" },
+    { url = "/pictures", name = "Pictures", icon = "image" },
+    { url = "/about", name = "About", icon = "user" },
 ]
 

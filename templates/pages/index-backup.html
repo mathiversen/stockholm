@@ -37,7 +37,7 @@
 
 <ul class="sidebar-nav">
     {% block sidebar_nav %}
-        {% for link in config.extra.sthml_links %}
+        {% for link in config.extra.nav %}
             <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
         {% endfor %}
     {% endblock sidebar_nav %}
