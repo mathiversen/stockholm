@@ -1,6 +1,6 @@
 {% extends "root.html" %}
 
-{% block content %}
+{% block main %}
 <section class="posts">
     <ul class="text-posts">
         {% set text_posts = get_section(path="text/posts/_index.md") %}
@@ -30,12 +30,4 @@
     </ul>
 </section>
 
-<ul class="sidebar-nav">
-    {% block sidebar_nav %}
-        {% for link in config.extra.nav %}
-            <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
-        {% endfor %}
-    {% endblock sidebar_nav %}
-</ul>
-
-{% endblock content %}
+{% endblock main %}

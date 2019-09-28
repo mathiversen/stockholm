@@ -1,10 +1,10 @@
 {% extends "root.html" %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{{ config.base_url }}/pictures.css">
-{% endblock extra_css %}
+{% block title %}
+    {{ section.title }}
+{% endblock title%}
 
-{% block content %}
+{% block main %}
     <section class="pictures">
         <h1>pictures</h1>
         <ul>
@@ -21,4 +21,4 @@
             {% endfor %}
         </ul>
     </section>
-{% endblock content %}
+{% endblock main %}

@@ -1,7 +1,26 @@
 {% extends "root.html" %}
 
-{% block content %}
-<section>
-    hej
-</section>
-{% endblock content %}
+{% block head %}
+{% raw %}
+    <style>
+        #main {
+            display: grid;
+            grid-auto-rows: minmax(80vh, auto);
+        }
+    </style>
+{% endraw %}
+{% endblock head %}
+
+{% block main %}
+    <link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
+    <section class="hero">
+        <div class="wrapper">
+            <picture>
+                {# TODO: Resposive image #}
+                <img src="{{ section.assets[0] }}" alt="Profile picture">
+            </picture>
+            <h1>{{ config.extra.name }}</h1>
+            <p>{{ config.extra.occupation }}</p>
+        </div>
+    </section>
+{% endblock main %}

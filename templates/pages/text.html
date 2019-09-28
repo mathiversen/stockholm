@@ -1,6 +1,10 @@
 {% extends "root.html" %}
 
-{% block content %}
+{% block title %}
+    {{ section.title }}
+{% endblock title%}
+
+{% block main %}
     <section class="posts">
         {% for page in paginator.pages %}
         <article class="post">
@@ -16,4 +20,4 @@
         </article>
         {% endfor %}
     </section>
-{% endblock content %}
+{% endblock main %}

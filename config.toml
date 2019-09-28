@@ -19,7 +19,9 @@ highlight_code = false
 build_search_index = false
 
 [extra]
-nav = [
+name = "Mathias Iversen"
+occupation = "Software Developer"
+navigation = [
     { url = "/", name = "Home", icon = "home" },
     { url = "/text", name = "Text", icon = "file-text" },
     { url = "/pictures", name = "Pictures", icon = "image" },

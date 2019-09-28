@@ -6,3 +6,10 @@
 	text-transform: uppercase;
 	grid-gap: 0.3rem; // TODO: Variable
 }
+
+%content-960 {
+	height: 100%;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}

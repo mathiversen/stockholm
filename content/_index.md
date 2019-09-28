@@ -1,5 +1,7 @@
 +++
 title = "Index"
 template = "pages/index.html"
-paginate_by = 2
 +++
+
+# Mathias Iversen
+Software Developer
