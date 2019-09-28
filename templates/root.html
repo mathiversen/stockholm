@@ -21,21 +21,38 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="{{ config.base_url }}/reset.css">
+        <link rel="stylesheet" href="{{ config.base_url }}/root.css">
         {% block extra_css %}
         {% endblock extra_css %}
 
         <!-- FONTS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
+        <!-- RSS -->
         {% if config.generate_rss %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ config.base_url }}/rss.xml"">
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ config.base_url }}/rss.xml"">
         {% endif %}
     </head>
     <body>
+
+        <!-- MAIN -->
         <main id="main">
             {% block content %}
             {% endblock content %}
         </main>
+
+        <!-- NAV -->
+        <nav>            
+            <ul class="sidebar-nav">
+                {% block sidebar_nav %}
+                    {% for link in config.extra.sthml_links %}
+                        <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+                    {% endfor %}
+                {% endblock sidebar_nav %}
+            </ul>
+        </nav>
+
+        <!-- SCRIPTS -->
         <script src="//instant.page/2.0.0" type="module" defer integrity="sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8"></script>
         {% block extra_script %}
         {% endblock extra_script %}

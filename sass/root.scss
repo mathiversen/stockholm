@@ -1,0 +1,12 @@
+:root {
+    --base: 18px;
+    font-size: var(--base);
+}
+
+@media screen and (min-width: 960px) {
+    #main {
+        padding: 0 2rem;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
