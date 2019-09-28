@@ -1,6 +1,5 @@
 +++
 title = "Stockholm"
-template = "pages/blog.html"
+page_template = "pages/text_posts.html"
 transparent = true
-paginate_by = 10
 +++

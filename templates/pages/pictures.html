@@ -1,12 +1,12 @@
 {% extends "root.html" %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{{ config.base_url }}/gallery.css">
+    <link rel="stylesheet" href="{{ config.base_url }}/pictures.css">
 {% endblock extra_css %}
 
 {% block content %}
-    <section class="gallery">
-        <h1>Gallery</h1>
+    <section class="pictures">
+        <h1>pictures</h1>
         <ul>
             {% for page in paginator.pages %}
             <li>

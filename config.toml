@@ -21,7 +21,8 @@ build_search_index = false
 [extra]
 sthml_links = [
     { url = "/", name = "Home" },
-    { url = "/blog/", name = "Blog" },
-    { url = "/gallery/", name = "Gallery" },
+    { url = "/text/", name = "Text" },
+    { url = "/pictures/", name = "Pictures" },
+    { url = "/about/", name = "About" },
 ]
 

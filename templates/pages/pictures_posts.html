@@ -1,0 +1,41 @@
+{% extends "root.html" %}
+
+{% block content %}
+<section class="posts">
+    <ul class="text-posts">
+        {% set text_posts = get_section(path="text/posts/_index.md") %}
+        {% for page in text_posts.pages | slice(start=0, end=2) %}
+        <li>
+            <p>
+                <strong>{{ page.date | date(format="%Y-%m-%d") }}</strong>
+                <a href="{{ page.permalink }}">
+                    {{ page.title }}
+                </a>
+            </p>
+        </li>
+        {% endfor %}                
+    </ul>
+    <ul class="pictures-posts">
+        {% set pictures_posts = get_section(path="pictures/posts/_index.md") %}
+        {% for page in pictures_posts.pages | slice(start=0, end=2) %}
+        <li>
+            <p>
+                <strong>{{ page.date | date(format="%Y-%m-%d") }}</strong>
+                <a href="{{ page.permalink }}">
+                    {{ page.title }}
+                </a>
+            </p>
+        </li>
+        {% endfor %}                
+    </ul>
+</section>
+
+<ul class="sidebar-nav">
+    {% block sidebar_nav %}
+        {% for link in config.extra.sthml_links %}
+            <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+        {% endfor %}
+    {% endblock sidebar_nav %}
+</ul>
+
+{% endblock content %}
