@@ -19,12 +19,12 @@ highlight_code = false
 build_search_index = false
 
 [extra]
-name = "Mathias Iversen"
+name = "Sven Svensson"
 occupation = "Software Developer"
 navigation = [
     { url = "/", name = "Home", icon = "home" },
+    { url = "/about", name = "About", icon = "user" },
     { url = "/text", name = "Text", icon = "file-text" },
     { url = "/pictures", name = "Pictures", icon = "image" },
-    { url = "/about", name = "About", icon = "user" },
 ]
 

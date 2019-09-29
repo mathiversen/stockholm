@@ -1,0 +1,22 @@
+@import '../helpers/_.scss';
+   
+.pictures {
+    background: lightgreen;
+
+    ol {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        li {
+
+            a {
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

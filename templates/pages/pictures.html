@@ -10,7 +10,7 @@
         <ul>
             {% for page in paginator.pages %}
             <li>
-                {% set asset = page.assets | first %}
+                {% set asset = page.assets[0] %}
                 <a href="{{ page.permalink }}">
                     <img
                         src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}"

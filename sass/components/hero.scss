@@ -2,37 +2,61 @@
    
 .hero {
     background: #ccc;
-    padding: 2rem 0;
-    
-    .wrapper {
-        @extend %content-960;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: minmax(80vh, auto);
+
+    header {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        grid-gap: 0.6rem;
-
-        picture {
-            display: flex;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            overflow: hidden;
-            
-            img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-            }
-        }
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        position: absolute;
+        width: calc(100vw - 2rem);
+        top: 0;
         
-        h1 {
-            font-size: 1.5rem;
-            text-align: center;
+        button {
+            background: none;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            @extend %label-text;
         }
+    }
+    
+    picture {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    
+    h1 {
+        font-size: $font-size-3xl;
+        line-height: 1.5;
+        text-align: center;
+        padding-top: 0.5rem;
+    }
 
-        p {
-            text-align: center;
-        }
+    p {
+        font-size: $font-size-s;
+        text-align: center;
+        text-transform: uppercase;
     }
 }

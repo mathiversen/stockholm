@@ -1,26 +1,129 @@
 {% extends "root.html" %}
+{% import "macros/icons.html" as macro_icon %}
 
 {% block head %}
 {% raw %}
-    <style>
-        #main {
-            display: grid;
-            grid-auto-rows: minmax(80vh, auto);
+<style>
+    #main {
+        display: grid;
+        grid-template-rows: minmax(80vh, auto);
+    }
+
+    .hero,
+    .about,
+    .text,
+    .pictures {
+        padding: 2rem;
+    }
+
+    @media (max-width: 500px) {
+
+        .hero,
+        .about,
+        .text,
+        .pictures {
+            padding: 1rem;
         }
-    </style>
+    }
+</style>
 {% endraw %}
 {% endblock head %}
 
 {% block main %}
-    <link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
-    <section class="hero">
-        <div class="wrapper">
-            <picture>
-                {# TODO: Resposive image #}
-                <img src="{{ section.assets[0] }}" alt="Profile picture">
-            </picture>
-            <h1>{{ config.extra.name }}</h1>
-            <p>{{ config.extra.occupation }}</p>
-        </div>
-    </section>
+<link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
+<section class="hero">
+    <header>
+        <button>{{ macro_icon::icon(name="rss") }}Rss</button>
+        <button>{{ macro_icon::icon(name="share-2") }}Share</button>
+    </header>
+    <picture>
+        {# TODO: Resposive image #}
+        <img src="{{ get_url(path='img/profile.jpeg') }}" alt="Profile picture">
+    </picture>
+    <h1>{{ config.extra.name }}</h1>
+    <p>{{ config.extra.occupation }}</p>
+</section>
+
+<link rel="stylesheet" href="{{ config.base_url }}/components/about.css">
+<section class="about">
+    <h2>About</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis consequuntur eos unde! Ut soluta inventore
+        animi sunt obcaecati voluptatem culpa.</p>
+    <ul>
+        <li>
+            {{ macro_icon::icon(name="star") }} Lorem ipsum dolor sit, amet consectetur adipisicing.
+        </li>
+        <li>
+            {{ macro_icon::icon(name="star") }} Lorem ipsum dolor sit, amet consectetur adipisicing.
+        </li>
+        <li>
+            {{ macro_icon::icon(name="star") }} Lorem ipsum dolor sit, amet consectetur adipisicing.
+        </li>
+    </ul>
+</section>
+
+<link rel="stylesheet" href="{{ config.base_url }}/components/text.css">
+<section class="text">
+    <h2>Text</h2>
+    <ol>
+        <li>
+            <a href="">
+                <article>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium fuga unde possimus numquam
+                        aliquid eius perspiciatis nulla nihil, quasi in!</p>
+                    <dl>
+                        <dt>Published:</dt>
+                        <dd><time>2019-01-01</time></dd>
+                        <dt>Tags:</dt>
+                        <dd><mark>Tag1</mark> <mark>Tag2</mark> <mark>Tag3</mark></dd>
+                    </dl>
+                </article>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <article>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium fuga unde possimus numquam
+                        aliquid eius perspiciatis nulla nihil, quasi in!</p>
+                    <dl>
+                        <dt>Published:</dt>
+                        <dd><time>2019-01-01</time></dd>
+                        <dt>Tags:</dt>
+                        <dd><mark>Tag1</mark> <mark>Tag2</mark> <mark>Tag3</mark></dd>
+                    </dl>
+                </article>
+            </a>
+        </li>
+    </ol>
+</section>
+
+<link rel="stylesheet" href="{{ config.base_url }}/components/pictures.css">
+<section class="pictures">
+    <h2>Pictures</h2>
+    <ol>
+        <li>
+            <a href="">
+                <img src="{{get_url(path='img/profile.jpeg')}}" alt="1">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="{{get_url(path='img/profile.jpeg')}}" alt="1">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="{{get_url(path='img/profile.jpeg')}}" alt="1">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="{{get_url(path='img/profile.jpeg')}}" alt="1">
+            </a>
+        </li>
+    </ol>
+</section>
+
 {% endblock main %}

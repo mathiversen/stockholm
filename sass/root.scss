@@ -6,4 +6,6 @@
 
 body {
     font-size: var(--font-size);
+    padding-bottom: 45px; // Adjust for nav
+    overflow-x: hidden; // FIXME: Why is this necessary!?
 }
