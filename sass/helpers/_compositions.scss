@@ -1,6 +1,7 @@
 @import '_variables.scss';
 
 %label-text {
+	color: currentColor;
 	font-size: $font-size-xs;
 	text-decoration: none;
 	text-transform: uppercase;

@@ -1,7 +1,7 @@
 {% extends "root.html" %}
 {% import "macros/icons.html" as macro_icon %}
 
-{% block head %}
+<!-- {% block head %}
 {% raw %}
 <style>
     #main {
@@ -25,16 +25,20 @@
             padding: 1rem;
         }
     }
+
 </style>
 {% endraw %}
-{% endblock head %}
+{% endblock head %} -->
 
 {% block main %}
 <link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
+
+{{ section.content | safe }}
 <section class="hero">
     <header>
-        <button>{{ macro_icon::icon(name="rss") }}Rss</button>
-        <button>{{ macro_icon::icon(name="share-2") }}Share</button>
+        <a href="#">{{ macro_icon::icon(name="rss") }}Rss</a>
+        <a href="#">Logo</a>
+        <a href="#">{{ macro_icon::icon(name="share-2") }}Share</a>
     </header>
     <picture>
         {# TODO: Resposive image #}

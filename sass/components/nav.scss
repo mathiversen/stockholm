@@ -7,7 +7,6 @@
 	bottom: 0;
 	width: 100%;
 	background: white;
-	border-radius: var(--nav-border-radius) var(--nav-border-radius) 0 0;
 	overflow: hidden;
 	border: solid var(--nav-border) rgba(0, 0, 0, 0.8);
     transform: translate(calc(-0.9 * var(--nav-border)), var(--nav-border));
@@ -18,15 +17,19 @@
 		grid-auto-flow: column;
 		list-style: none;
 		padding: 0;
-        margin: 0;
-        
-        a {
-            display: grid;
+		margin: 0;
+
+		li:hover a svg{
+			fill: gray;
+		}
+
+		a {
+			display: grid;
 			padding: 0.7rem;
 			justify-items: center;
 			align-items: center;
 			@extend %label-text;
 			color: inherit;
-        }
+		}
     }
 }

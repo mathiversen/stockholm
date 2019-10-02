@@ -2,7 +2,7 @@
 
 {# NAV #}
 <link rel="stylesheet" href="{{ config.base_url }}/components/nav.css">
-<nav class="nav">            
+<nav class="nav" aria-label="Main navigation">
     <ul>
         {% block sidebar_nav %}
             {% for link in config.extra.navigation %}

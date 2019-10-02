@@ -19,7 +19,7 @@ highlight_code = false
 build_search_index = false
 
 [extra]
-name = "Sven Svensson"
+name = "Mathias Iversen"
 occupation = "Software Developer"
 navigation = [
     { url = "/", name = "Home", icon = "home" },
