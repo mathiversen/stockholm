@@ -2,4 +2,9 @@
    
 .about {
     background: lightyellow;
+
+    .content {
+        @extend %content-960;
+        padding: var(--section-padding) 0;
+    }
 }

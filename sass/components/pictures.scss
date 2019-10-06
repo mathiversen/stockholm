@@ -2,18 +2,21 @@
    
 .pictures {
     background: lightgreen;
-    padding-bottom: 2rem;
-
-    @media (min-width: 500px) {
-        padding-bottom: 3rem;
+    
+    .content {
+        @extend %content-960;
+        padding: var(--section-padding) 0;
     }
 
     ol {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        display: flex;
+        flex-direction: column;
         grid-gap: 1rem;
-        li {
+        justify-content: space-around;
+        flex-flow: row wrap;
 
+        li {
+            width: calc(100% / 2 - 1rem);
             a {
                 display: block;
 

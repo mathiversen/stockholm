@@ -2,4 +2,9 @@
    
 .text {
     background: lightblue;
+
+    .content {
+        @extend %content-960;
+        padding: var(--section-padding) 0;
+    }
 }

@@ -17,11 +17,7 @@
 		grid-auto-flow: column;
 		list-style: none;
 		padding: 0;
-		margin: 0;
-
-		li:hover a svg{
-			fill: gray;
-		}
+		@extend %content-960;
 
 		a {
 			display: grid;
@@ -30,6 +26,16 @@
 			align-items: center;
 			@extend %label-text;
 			color: inherit;
+
+			&:hover, &:active, &:focus {
+				color: white;
+				background: black;
+
+				svg {
+					stroke: white;
+					fill: black;
+				}
+			}
 		}
     }
 }

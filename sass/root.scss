@@ -2,10 +2,20 @@
 
 :root {
     --font-size: 18px;
+    --section-padding: 2rem;
+    @media (min-width: 500px) {
+        --section-padding: 5.7rem;
+    }
 }
 
 body {
     font-size: var(--font-size);
-    padding-bottom: 45px; // Adjust for nav
-    overflow-x: hidden; // FIXME: Why is this necessary!?
+    padding-bottom: 4rem; // Adjust for nav
+}
+
+#main > section {
+    padding: 0 1rem;
+    @media (min-width: 500px) {
+        padding: 0 2rem;
+    }
 }

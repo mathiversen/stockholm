@@ -1,21 +1,27 @@
 @import '../helpers/_.scss';
    
 .hero {
-    background: #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: minmax(80vh, auto);
-    padding-top: 96px;
+    background: white;
+    
+    .content {
+        --section-padding: 5.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--section-padding) 0;
+        min-height: calc(100vh - 2 * var(--section-padding));
+        position: relative;
+        @extend %content-960;
+    }
 
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1rem 0;
         position: absolute;
-        width: calc(100vw - 2rem);
+        width: 100%;
         top: 0;
         
         a {
