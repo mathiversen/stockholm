@@ -3,7 +3,7 @@
 
 {% block main %}
 <link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
-<section class="hero" aria-label="hero">
+<section class="hero" aria-label="hero section">
     <div class="content">
         <header>
             <a href="#">{{ macro_icon::icon(name="rss") }}Rss</a>
@@ -22,9 +22,10 @@
 <link rel="stylesheet" href="{{ config.base_url }}/components/about.css">
 <section class="about" aria-label="about summary">
     <div class="content">
-        <h2>About</h2>
+        {% set page = get_page(path="about.md") %}
+        <h2>{{ page.title }}</h2>
         <blockquote>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat sunt quisquam ad voluptatem nisi illo error nesciunt provident doloremque? Pariatur iure ea earum quas laboriosam numquam neque facilis dolor nobis?</p>
+            <p>{{ page.summary | safe }}</p>
         </blockquote>
     </div>
 </section>
@@ -34,36 +35,38 @@
     <div class="content">
         <h2>Text</h2>
         <ol>
-            <li>
-                <a href="">
+            {% set text_section = get_section(path="text/_index.md") %}
+            {% set icon_size = "1.2em" %}
+            {% for page in text_section.pages | sort(attribute="date") | reverse | slice(start=0, end=4) %}
+                <li>
                     <article>
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium fuga unde possimus numquam
-                            aliquid eius perspiciatis nulla nihil, quasi in!</p>
+                        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
                         <dl>
-                            <dt>Published:</dt>
-                            <dd><time>2019-01-01</time></dd>
-                            <dt>Tags:</dt>
-                            <dd><mark>Tag1</mark> <mark>Tag2</mark> <mark>Tag3</mark></dd>
+                            <dt>{{ macro_icon::icon(name="calendar", size=icon_size) }}</dt>
+                            <dd><time>{{ page.date }}</time></dd>
+                            <dt>{{ macro_icon::icon(name="time", size=icon_size) }}</dt>
+                            <dd><time>{{ page.reading_time }} min</time>, {{ page.word_count }} words.</dd>
+                            {% if page.taxonomies.categories | length > 0 %}
+                            <dt class="tags-term">{{ macro_icon::icon(name="book-open", size=icon_size) }}</dt>
+                            <dd class="tags-definition">
+                                {% for category in page.taxonomies.categories %}
+                                <mark>{{ category }}</mark>
+                                {% endfor %}
+                            </dd>
+                            {% endif %}
+                            {% if page.taxonomies.tags | length > 0 %}
+                            <dt class="tags-term">{{ macro_icon::icon(name="tag", size=icon_size) }}</dt>
+                            <dd class="tags-definition">
+                                {% for tag in page.taxonomies.tags %}
+                                <mark>{{ tag }}</mark>
+                                {% endfor %}
+                            </dd>
+                            {% endif %}
                         </dl>
                     </article>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <article>
-                        <h3>Lorem ipsum dolor sit amet.</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium fuga unde possimus numquam
-                            aliquid eius perspiciatis nulla nihil, quasi in!</p>
-                        <dl>
-                            <dt>Published:</dt>
-                            <dd><time>2019-01-01</time></dd>
-                            <dt>Tags:</dt>
-                            <dd><mark>Tag1</mark> <mark>Tag2</mark> <mark>Tag3</mark></dd>
-                        </dl>
-                    </article>
-                </a>
-            </li>
+                </li>
+               
+            {% endfor %}
         </ol>        
     </div>
 </section>

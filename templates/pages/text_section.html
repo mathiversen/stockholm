@@ -1,0 +1,27 @@
+{% extends "root.html" %}
+
+{% block main %}
+    <section class="posts">
+        <!-- {{ __tera_context }} -->
+        {% for page in paginator.pages | sort(attribute="date") %}
+            <article class="post">
+                <h2 class="post-title">
+                    <a href="{{ page.permalink }}">
+                        {{ page.title }}
+                    </a>
+                </h2>
+                <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
+                {% if page.summary %}
+                <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
+                {% endif %}
+            </article>
+        {% endfor %}
+        
+        {% if paginator.current_index > 1 %}
+            <a href="{{ paginator.previous }}">Previous</a>
+        {% endif %}
+        {% if paginator.current_index != paginator.number_pagers %}
+            <a href="{{ paginator.next }}">Next</a>
+        {% endif %}
+    </section>
+{% endblock main %}

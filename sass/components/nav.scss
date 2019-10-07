@@ -27,7 +27,7 @@
 			@extend %font-label;
 			color: inherit;
 
-			&:hover, &:active, &:focus, &:target {
+			&:hover, &:active, &:focus {
 				color: white;
 				background: black;
 
