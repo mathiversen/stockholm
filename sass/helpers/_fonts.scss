@@ -1,1 +1,11 @@
-// TODO: Implement font compositions
+%font-sans {
+    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif'
+}
+
+%font-serif {
+    font-family: 'Georgia, Cambria, "Times New Roman", Times, serif'
+}
+
+%font-mono {
+    font-family: 'Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;'
+}

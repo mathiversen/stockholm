@@ -8,6 +8,13 @@
 	grid-gap: 0.3rem; // TODO: Variable
 }
 
+%content-padding {
+	padding: $spacing-10 0;
+    @media (min-width: $screen-s) {
+		padding: $spacing-20 0;
+	}
+}
+
 %content-960 {
 	width: 100%;
 	max-width: 960px;

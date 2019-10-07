@@ -21,13 +21,13 @@
 
 		a {
 			display: grid;
-			padding: 0.7rem;
+			padding: 0.5rem;
 			justify-items: center;
 			align-items: center;
 			@extend %label-text;
 			color: inherit;
 
-			&:hover, &:active, &:focus {
+			&:hover, &:active, &:focus, &:target {
 				color: white;
 				background: black;
 

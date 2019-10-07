@@ -1,4 +1,4 @@
-// FONT SIZE
+// Fonts
 $font-size-xs: 0.75rem;
 $font-size-s: 0.875rem;
 $font-size: 1rem;
@@ -10,11 +10,29 @@ $font-size-4xl: 2.25rem;
 $font-size-5xl: 3rem;
 $font-size-6xl: 4rem;
 
-$section-padding: 5.7rem;
+// Spacing
+$spacing-px: 1px;
+$spacing-0: 0;
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-5: 1.25rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-10: 2.5rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
+$spacing-20: 5rem;
+$spacing-24: 6rem;
+$spacing-32: 8rem;
+$spacing-40: 10rem;
+$spacing-48: 12rem;
+$spacing-56: 14rem;
+$spacing-64: 16rem;
 
-// BORDER radius
-// $border-radius-0: 0;
-// $border-radius-s: 0.125rem;
-// $border-radius-m: 0.25rem;
-// $border-radius-l: 0.5rem;
-// $border-radius-full: 50%;
+// Screens
+$screen-s: 640px;
+$screen-m: 768px;
+$screen-l: 1024px;
+$screen-xl: 1280px;
