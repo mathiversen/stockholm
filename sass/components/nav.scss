@@ -24,7 +24,7 @@
 			padding: 0.5rem;
 			justify-items: center;
 			align-items: center;
-			@extend %label-text;
+			@extend %font-label;
 			color: inherit;
 
 			&:hover, &:active, &:focus, &:target {

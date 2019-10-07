@@ -3,7 +3,7 @@
 
 {% block main %}
 <link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
-<section class="hero">
+<section class="hero" aria-label="hero">
     <div class="content">
         <header>
             <a href="#">{{ macro_icon::icon(name="rss") }}Rss</a>
@@ -20,27 +20,17 @@
 </section>
 
 <link rel="stylesheet" href="{{ config.base_url }}/components/about.css">
-<section class="about">
+<section class="about" aria-label="about summary">
     <div class="content">
         <h2>About</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis consequuntur eos unde! Ut soluta inventore
-            animi sunt obcaecati voluptatem culpa.</p>
-        <ul>
-            <li>
-                {{ macro_icon::icon(name="star") }} Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-            <li>
-                {{ macro_icon::icon(name="star") }} Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-            <li>
-                {{ macro_icon::icon(name="star") }} Lorem ipsum dolor sit, amet consectetur adipisicing.
-            </li>
-        </ul>
+        <blockquote>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat sunt quisquam ad voluptatem nisi illo error nesciunt provident doloremque? Pariatur iure ea earum quas laboriosam numquam neque facilis dolor nobis?</p>
+        </blockquote>
     </div>
 </section>
 
 <link rel="stylesheet" href="{{ config.base_url }}/components/text.css">
-<section class="text">
+<section class="text" aria-label="text summary">
     <div class="content">
         <h2>Text</h2>
         <ol>
@@ -79,7 +69,7 @@
 </section>
 
 <link rel="stylesheet" href="{{ config.base_url }}/components/pictures.css">
-<section class="pictures">
+<section class="pictures" aria-label="pictures summary">
     <div class="content">
         <h2>Pictures</h2>
         <ol>

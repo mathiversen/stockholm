@@ -1,13 +1,5 @@
 @import '_variables.scss';
 
-%label-text {
-	color: currentColor;
-	font-size: $font-size-xs;
-	text-decoration: none;
-	text-transform: uppercase;
-	grid-gap: 0.3rem; // TODO: Variable
-}
-
 %content-padding {
 	padding: $spacing-10 0;
     @media (min-width: $screen-s) {

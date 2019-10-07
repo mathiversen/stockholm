@@ -9,3 +9,17 @@
 %font-mono {
     font-family: 'Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;'
 }
+
+%font-body {
+    font-size: 18px;
+    line-height: 1.3;
+    @extend %font-sans;
+}
+
+%font-label {
+    color: currentColor;
+    font-size: $font-size-xs;
+    text-decoration: none;
+    text-transform: uppercase;
+    grid-gap: $spacing-1; // TODO: Variable
+}
