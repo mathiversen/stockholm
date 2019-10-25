@@ -1,10 +1,8 @@
-<link rel="stylesheet" href="{{ config.base_url }}/components/pictures.css">
+<link rel="stylesheet" href="{{ config.base_url }}/sections/index_pictures.css">
 
-<section class="pictures" aria-label="pictures summary">
+<section id="section-pictures" aria-label="pictures summary">
     <div class="content">
-        <h2>
-            <a href="{{ config.base_url }}/pictures">{{ macro_icon::icon(name="link") }} Pictures</a>
-        </h2>
+        {{ macro_elements::section_title(text="Pictures", link="{{ config.base_url }}/pictures")}}
         <ol>
             <li>
                 <a href="">

@@ -1,10 +1,8 @@
-<link rel="stylesheet" href="{{ config.base_url }}/components/text.css">
+<link rel="stylesheet" href="{{ config.base_url }}/sections/index_text.css">
 
-<section class="text" aria-label="text summary">
+<section id="section-text" aria-label="text summary">
     <div class="content">
-        <h2>
-            <a href="{{ config.base_url }}/text">{{ macro_icon::icon(name="link") }} Text</a>
-        </h2>
+        {{ macro_elements::section_title(text="Text", link="{{ config.base_url }}/text")}}
         <ol>
             {% set text_section = get_section(path="text/_index.md") %}
             {% set icon_size = "1.2em" %}

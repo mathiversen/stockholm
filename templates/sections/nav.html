@@ -1,8 +1,8 @@
 {% import "macros/icons.html" as macro_icon %}
 
-<link rel="stylesheet" href="{{ config.base_url }}/components/nav.css">
+<link rel="stylesheet" href="{{ config.base_url }}/sections/nav.css">
 
-<nav class="nav" aria-label="Main navigation">
+<nav id="section-nav" aria-label="Main navigation">
     <ul>
         {% block sidebar_nav %}
             {% for link in config.extra.navigation %}

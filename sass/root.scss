@@ -22,7 +22,12 @@ noscript {
     }
 }
 
-// Mobile fixes
-* {
-    -webkit-tap-highlight-color: transparent;
+a, button {
+    -webkit-tap-highlight-color: transparent; // Note: Fix chrome select color
 }
+
+// Todo: Set selection color
+::selection {
+    color: red;
+    background: yellow;
+  }

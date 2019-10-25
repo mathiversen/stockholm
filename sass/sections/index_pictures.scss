@@ -1,0 +1,31 @@
+@import '../helpers/_.scss';
+   
+#section-pictures {
+    background: lightgreen;
+    @extend %section;
+    
+    .content {
+        @extend %content-960;
+        @extend %content-padding;
+    }
+
+	h2 {
+        @extend %font-section-title;
+    }
+
+    ol {
+        display: grid;
+        grid-gap: $spacing-10;
+        grid-template-columns: 1fr 1fr;
+
+        a {
+            display: block;
+
+            img {
+                display: inherit;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

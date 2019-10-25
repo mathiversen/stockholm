@@ -1,0 +1,35 @@
+@import '../helpers/_.scss';
+   
+#section-text {
+    background: lightblue;
+    @extend %section;
+
+    .content {
+        @extend %content-960;
+        @extend %content-padding;
+    }
+    	
+	h2 {
+        @extend %font-section-title;
+    }
+
+
+    ol {
+        display: grid;
+        grid-gap: $spacing-10;
+    }
+
+    article {
+        dl {
+            display: grid;
+            grid-template-columns: auto auto auto auto 1fr;
+            grid-column-gap: $spacing-2;
+            font-size: $font-size-s;
+            align-items: center;
+            .tags-term, .tags-definition {
+                grid-row: 2;
+            }
+        }
+    }
+
+}

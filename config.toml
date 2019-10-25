@@ -27,4 +27,5 @@ navigation = [
     { url = "/pictures", name = "Pictures", icon = "image" },
     # { url = "/settings", name = "Settings", icon = "settings" },
 ]
+prefetch = "quicklink"
 

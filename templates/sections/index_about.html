@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ config.base_url }}/sections/index_about.css">
+
+<section id="section-about" aria-label="about summary">
+    <div class="content">
+        {% set page = get_page(path="about.md") %}
+        {{ macro_elements::section_title(text=page.title, link=page.permalink)}}
+        <blockquote>
+        <p>{{ page.summary | safe }}</p>
+        </blockquote>
+    </div>
+</section>

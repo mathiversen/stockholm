@@ -13,7 +13,39 @@
 %font-body {
     font-size: 18px;
     line-height: 1.3;
+    @extend %font-serif;
+}
+
+// TITLES
+%font-page-title {
+    font-size: $font-size-3xl;
+    line-height: 1.5;
+    text-align: center;
     @extend %font-sans;
+}
+
+%font-page-subtitle {
+    font-size: $font-size-s;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+%font-section-title {
+    font-size: $font-size-3xl;
+    line-height: 1.5;
+    text-decoration-style: dotted;
+    padding-bottom: $spacing-5;
+    @extend %font-sans;
+
+
+    a {
+        color: inherit;
+        text-decoration-style: dotted;
+        &:active, &:hover, &:focus {
+            text-decoration-style: double;
+        }
+    }
 }
 
 %font-label {
@@ -24,8 +56,3 @@
     grid-gap: $spacing-1; // TODO: Variable
 }
 
-%font-heading-section {
-    font-size: $font-size-4xl;
-    line-height: 1.5;
-    text-decoration-style: dotted;
-}

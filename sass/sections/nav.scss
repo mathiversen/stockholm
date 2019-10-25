@@ -1,6 +1,6 @@
 @import '../helpers/_.scss';
 
-.nav {
+#section-nav {
 	--nav-border: 0.3rem;
 	--nav-border-radius: 2rem;
 	position: fixed;
@@ -9,7 +9,11 @@
 	background: white;
 	overflow: hidden;
 	border: solid var(--nav-border) rgba(0, 0, 0, 0.8);
-    transform: translate(calc(-0.9 * var(--nav-border)), var(--nav-border));
+	transform: translate(calc(-0.9 * var(--nav-border)), var(--nav-border));
+
+	h2 {
+        @extend %font-section-title;
+    }
     
     ul {
         display: grid;

@@ -1,6 +1,6 @@
 @import '../helpers/_.scss';
    
-.about {
+#section-about {
     background: lightyellow;
     @extend %section;
 
@@ -9,7 +9,7 @@
         @extend %content-padding;
     }
 
-    h2 a {
-        @extend %font-heading-section;
+    h2 {
+        @extend %font-section-title;
     }
 }
