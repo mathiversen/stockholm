@@ -1,10 +1,10 @@
 +++
-title = "Twelwth article"
-date = 2019-09-16
 template = "pages/text_page.html"
+title = "This is the newest article and should always show at the top!"
+date = 2019-09-16
 [taxonomies]
+categories = ["programming"]
 tags = ["rust", "web"]
-categories = ["programming", "random"]
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu feugiat sapien. Aenean ligula nunc, laoreet id sem in, interdum bibendum felis. Donec vel dui neque. Praesent ac sem ut justo volutpat rutrum a imperdiet tellus. Nam lobortis massa non hendrerit hendrerit. Vivamus porttitor dignissim turpis, eget aliquam urna tincidunt non. Aliquam et fringilla turpis. Nullam eros est, eleifend in ornare sed, hendrerit eget est. Aliquam tellus felis, suscipit vitae ex vel, fringilla tempus massa. Nulla facilisi. Pellentesque lobortis consequat lectus. Maecenas ac libero elit.

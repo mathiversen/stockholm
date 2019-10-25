@@ -3,9 +3,11 @@
 <section class="about" aria-label="about summary">
     <div class="content">
         {% set page = get_page(path="about.md") %}
-        <h2>{{ page.title }}</h2>
+        <h2>
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </h2>
         <blockquote>
-            <p>{{ page.summary | safe }}</p>
+        <p>{{ page.summary | safe }}</p>
         </blockquote>
     </div>
 </section>

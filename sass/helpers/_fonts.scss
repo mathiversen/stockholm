@@ -23,3 +23,9 @@
     text-transform: uppercase;
     grid-gap: $spacing-1; // TODO: Variable
 }
+
+%font-heading-section {
+    font-size: $font-size-4xl;
+    line-height: 1.5;
+    text-decoration-style: dotted;
+}

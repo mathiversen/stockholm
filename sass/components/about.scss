@@ -8,4 +8,8 @@
         @extend %content-960;
         @extend %content-padding;
     }
+
+    h2 a {
+        @extend %font-heading-section;
+    }
 }
