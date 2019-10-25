@@ -7,7 +7,7 @@
 
 body {
     @extend %font-body;
-    padding-bottom: var(--nav-height); // Adjust for nav
+    padding-bottom: var(--nav-height);
 }
 
 noscript {
@@ -22,9 +22,7 @@ noscript {
     }
 }
 
-#main > section {
-    padding: 0 $spacing-4;
-    @media (min-width: $screen-s) {
-        padding: 0 $spacing-8;
-    }
+// Mobile fixes
+* {
+    -webkit-tap-highlight-color: transparent;
 }

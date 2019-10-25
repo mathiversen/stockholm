@@ -1,21 +1,9 @@
-# The URL the site will be built for
 base_url = "https://example.com"
-
-# Website title
 title = "Stockholm"
-
-# RSS
 generate_rss = true
 rss_limit = 10
-
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 taxonomies = [
@@ -25,11 +13,18 @@ taxonomies = [
 
 [extra]
 name = "Mathias Iversen"
-occupation = "Software Developer"
+description = "Software Developer"
+social_links = [
+    { url = "https://www.facebook.com", icon = "facebook"},
+    { url = "https://twitter.com/", icon = "twitter"},
+    { url = "https://github.com/", icon = "github"},
+    { url = "https://linkedin.com/", icon = "linkedin"},
+]
 navigation = [
     { url = "/", name = "Home", icon = "home" },
     { url = "/about", name = "About", icon = "user" },
     { url = "/text", name = "Text", icon = "file-text" },
     { url = "/pictures", name = "Pictures", icon = "image" },
+    # { url = "/settings", name = "Settings", icon = "settings" },
 ]
 

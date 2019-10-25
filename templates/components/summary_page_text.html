@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="{{ config.base_url }}/components/text.css">
+
+<section class="text" aria-label="text summary">
+    <div class="content">
+        <h2>Text</h2>
+        <ol>
+            {% set text_section = get_section(path="text/_index.md") %}
+            {% set icon_size = "1.2em" %}
+            {% for page in text_section.pages | sort(attribute="date") | reverse | slice(start=0, end=4) %}
+                <li>
+                    <article>
+                        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+                        <p>{{ page.summary | truncate(length=150) | safe }}</p>
+                        <dl>
+                            <dt>{{ macro_icon::icon(name="calendar", size=icon_size) }}</dt>
+                            <dd><time>{{ page.date }}</time></dd>
+                            <dt>{{ macro_icon::icon(name="time", size=icon_size) }}</dt>
+                            <dd><time>{{ page.reading_time }} min</time>, {{ page.word_count }} words.</dd>
+                            {% if page.taxonomies.categories | length > 0 %}
+                            <dt class="tags-term">{{ macro_icon::icon(name="book-open", size=icon_size) }}</dt>
+                            <dd class="tags-definition">
+                                {% for category in page.taxonomies.categories %}
+                                <mark>{{ category }}</mark>
+                                {% endfor %}
+                            </dd>
+                            {% endif %}
+                            {% if page.taxonomies.tags | length > 0 %}
+                            <dt class="tags-term">{{ macro_icon::icon(name="tag", size=icon_size) }}</dt>
+                            <dd class="tags-definition">
+                                {% for tag in page.taxonomies.tags %}
+                                <mark>{{ tag }}</mark>
+                                {% endfor %}
+                            </dd>
+                            {% endif %}
+                        </dl>
+                    </article>
+                </li>
+               
+            {% endfor %}
+        </ol>        
+    </div>
+</section>

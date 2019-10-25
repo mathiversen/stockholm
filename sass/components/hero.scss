@@ -2,6 +2,7 @@
    
 .hero {
     background: white;
+    @extend %section;
     
     .content {
         --padding: 5rem;
@@ -56,13 +57,33 @@
             font-size: $font-size-3xl;
             line-height: 1.5;
             text-align: center;
-            padding-top: 0.5rem;
         }
     
         p {
             font-size: $font-size-s;
             text-align: center;
             text-transform: uppercase;
+        }
+
+        ul {
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: $spacing-2;
+
+            a {
+                color: $font-color-descrete;
+                &:hover, &:active, &:focus {
+                    svg {
+                        $social: ("facebook": #4064ac, "twitter": #1c9cea, "linkedin": #006294, "github": #24292e);
+                        @each $name, $color in $social {
+                            &.feather-#{$name} {
+                                stroke: $color;
+                                fill: $color;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }   
 }

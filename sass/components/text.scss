@@ -2,6 +2,7 @@
    
 .text {
     background: lightblue;
+    @extend %section;
 
     .content {
         @extend %content-960;

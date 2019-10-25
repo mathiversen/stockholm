@@ -2,6 +2,7 @@
    
 .pictures {
     background: lightgreen;
+    @extend %section;
     
     .content {
         @extend %content-960;

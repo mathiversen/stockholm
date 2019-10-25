@@ -28,11 +28,11 @@
 			color: inherit;
 
 			&:hover, &:active, &:focus {
-				color: white;
+				color: $font-color-inverted;
 				background: black;
 
 				svg {
-					stroke: white;
+					stroke: $font-color-inverted;
 					fill: black;
 				}
 			}

@@ -12,3 +12,10 @@
 	max-width: 960px;
 	margin: 0 auto;
 }
+
+%section {
+	padding: 0 $spacing-4;
+    @media (min-width: $screen-s) {
+        padding: 0 $spacing-8;
+    }
+}

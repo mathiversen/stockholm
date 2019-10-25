@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ config.base_url }}/components/hero.css">
+
+<section class="hero" aria-label="hero section">
+    <div class="content">
+        {# <header>
+            <a href="{{get_url(path='rss.xml')}}">{{ macro_icon::icon(name="rss") }}Rss</a>
+            <a href="/"><img src="{{ get_url(path='logo/safari-pinned-tab.svg') }}" width="32px" height="auto" alt="Site Logo"></a>
+            <a href="#">{{ macro_icon::icon(name="edit") }}Theme</a>
+        </header> #}
+        <picture>
+            <img src="{{ get_url(path='img/profile.jpeg') }}" alt="Profile picture">
+        </picture>
+        <h1>{{ config.extra.name }}</h1>
+        <p>{{ config.extra.description }}</p>
+        <ul>
+            {% for link in config.extra.social_links %}
+                <li><a href="{{link.url}}">{{ macro_icon::icon(name=link.icon, size=18) }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

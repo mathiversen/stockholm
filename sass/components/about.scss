@@ -2,6 +2,7 @@
    
 .about {
     background: lightyellow;
+    @extend %section;
 
     .content {
         @extend %content-960;
