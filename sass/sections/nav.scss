@@ -8,8 +8,9 @@
 	width: 100%;
 	background: white;
 	overflow: hidden;
-	border: solid var(--nav-border) rgba(0, 0, 0, 0.8);
-	transform: translate(calc(-0.9 * var(--nav-border)), var(--nav-border));
+	border-top: solid var(--nav-border) rgba(0, 0, 0, 0.8);
+	transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 
 	h2 {
         @extend %font-section-title;

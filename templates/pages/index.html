@@ -4,7 +4,10 @@
 
 {% block main %}
 {% include "sections/index_hero.html" %}
-{% include "sections/index_about.html" %}
+{% set about_page = get_page(path="about.md")%}
+{% if about_page.summary %}
+    {% include "sections/index_about.html" %}
+{% endif %}
 {% include "sections/index_text.html" %}
 {% include "sections/index_pictures.html" %}
 {% endblock main %}

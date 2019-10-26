@@ -13,7 +13,8 @@ taxonomies = [
 
 [extra]
 name = "Mathias Iversen"
-description = "Software Developer"
+occupation = "Software Developer"
+introduction = "Hello stranger! This is my small corner of the web. I'll use this website to showcase stuff that I do or, write or, take pictures of. Hope you enjoy it :)"
 social_links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},
@@ -25,7 +26,6 @@ navigation = [
     { url = "/about", name = "About", icon = "user" },
     { url = "/text", name = "Text", icon = "file-text" },
     { url = "/pictures", name = "Pictures", icon = "image" },
-    # { url = "/settings", name = "Settings", icon = "settings" },
 ]
 prefetch = "quicklink"
 

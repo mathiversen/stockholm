@@ -1,13 +1,11 @@
 @import 'helpers/_.scss';
 
 :root {
-    // Elements
-    --nav-height: 61px;
+    // TODO: Variables here?
 }
 
-body {
-    @extend %font-body;
-    padding-bottom: var(--nav-height);
+html {
+    @extend %font-html;
 }
 
 noscript {
@@ -28,6 +26,6 @@ a, button {
 
 // Todo: Set selection color
 ::selection {
-    color: red;
-    background: yellow;
+    color: black;
+    background: lightblue;
   }

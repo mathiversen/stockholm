@@ -6,7 +6,7 @@
     <ul>
         {% block sidebar_nav %}
             {% for link in config.extra.navigation %}
-                <li><a href="{{link.url}}" id="link-{{link.name | slugify}}">{{ macro_icon::icon(name=link.icon) }}{{link.name}}</a></li>
+                <li><a href="{{link.url}}" id="link-{{link.name | slugify}}" tabindex="{{loop.index}}">{{ macro_icon::icon(name=link.icon) }}{{link.name}}</a></li>
             {% endfor %}
         {% endblock sidebar_nav %}
     </ul>
