@@ -24,8 +24,8 @@ social_links = [
 navigation = [
     { url = "/", name = "Home", icon = "home" },
     { url = "/about", name = "About", icon = "user" },
-    { url = "/text", name = "Text", icon = "file-text" },
-    { url = "/pictures", name = "Pictures", icon = "image" },
+    { url = "/articles", name = "Articles", icon = "file-text" },
+    { url = "/gallery", name = "Gallery", icon = "image" },
 ]
 prefetch = "quicklink"
 

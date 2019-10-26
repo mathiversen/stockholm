@@ -1,5 +1,5 @@
 +++
-template = "pages/text.html"
+template = "pages/article.html"
 title = "This is the newest article and should always show at the top!"
 date = 2019-09-16
 [taxonomies]
