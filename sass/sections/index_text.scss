@@ -1,7 +1,6 @@
 @import '../helpers/_.scss';
    
 #section-text {
-    background: lightblue;
     @extend %section;
 
     .content {

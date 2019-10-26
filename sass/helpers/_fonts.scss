@@ -11,6 +11,11 @@ $font-size-4xl: 2.25rem;
 $font-size-5xl: 3rem;
 $font-size-6xl: 4rem;
 
+// Colors
+$font-color: rgba(0,0,0,0.9);
+$font-color-inverted: rgba(255,255,255, 0.9);
+$font-color-descrete: rgba(0,0,0,0.6);
+
 // Fonts
 %font-sans {
     font-family: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif'
@@ -53,20 +58,12 @@ $font-size-6xl: 4rem;
     line-height: 1.5;
     text-decoration-style: dotted;
     padding-bottom: $spacing-5;
+    font-weight: bold;
     @extend %font-sans;
-
-
-    a {
-        color: inherit;
-        text-decoration-style: dotted;
-        &:active, &:hover, &:focus {
-            text-decoration-style: double;
-        }
-    }
 }
 
 %font-section-subtitle {
-    
+    color: $font-color-descrete;
 }
 
 // Buttons & inputs

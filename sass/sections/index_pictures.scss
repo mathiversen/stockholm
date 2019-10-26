@@ -1,7 +1,7 @@
 @import '../helpers/_.scss';
    
 #section-pictures {
-    background: lightgreen;
+    background: rgb(245, 245, 245);
     @extend %section;
     
     .content {
@@ -15,9 +15,13 @@
 
     ol {
         display: grid;
-        grid-gap: $spacing-10;
         grid-template-columns: 1fr 1fr;
-
+        grid-gap: $spacing-4;
+        
+        @media (min-width: $screen-s) {
+            grid-gap: $spacing-10;
+        }
+    
         a {
             display: block;
 

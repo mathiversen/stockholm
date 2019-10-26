@@ -2,7 +2,7 @@
 
 <section id="section-text" aria-label="text summary">
     <div class="content">
-        {{ macro_elements::section_title(text="Text", link="{{ config.base_url }}/text")}}
+        <h2>Text</h2>
         <ol>
             {% set text_section = get_section(path="text/_index.md") %}
             {% for page in text_section.pages | sort(attribute="date") | reverse | slice(start=0, end=4) %}

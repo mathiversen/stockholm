@@ -10,7 +10,7 @@
         flex-direction: column;
         grid-template-rows: auto 1fr;
         height: 100vh;
-        min-height: 500px;
+        min-height: 600px;
         @extend %content-960;
     }
 
@@ -91,7 +91,7 @@
     }
 
     blockquote {
-        max-width: 500px;
+        max-width: 450px;
         text-align: center;
         font-style: italic;
         margin: 0 auto;
