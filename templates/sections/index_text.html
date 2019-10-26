@@ -5,32 +5,33 @@
         {{ macro_elements::section_title(text="Text", link="{{ config.base_url }}/text")}}
         <ol>
             {% set text_section = get_section(path="text/_index.md") %}
-            {% set icon_size = "1.2em" %}
             {% for page in text_section.pages | sort(attribute="date") | reverse | slice(start=0, end=4) %}
             <li>
                 <article>
                     <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
                     <dl>
-                        <dt>{{ macro_icon::icon(name="calendar", size=icon_size) }}</dt>
+                        <dt>{{ macro_icon::icon(name="calendar") }}</dt>
                         <dd><time>{{ page.date }}</time></dd>
-                        <dt>{{ macro_icon::icon(name="time", size=icon_size) }}</dt>
+                        <dt>{{ macro_icon::icon(name="time") }}</dt>
                         <dd><time>{{ page.reading_time }} min</time>, {{ page.word_count }} words.</dd>
                     </dl>
                     <p>{{ page.summary | truncate(length=150) | safe }}</p>
                     <dl>
                         {% if page.taxonomies.categories | length > 0 %}
-                        <dt class="tags-term">{{ macro_icon::icon(name="book-open", size=icon_size) }}</dt>
+                        <dt class="tags-term">{{ macro_icon::icon(name="book-open") }}</dt>
                         <dd class="tags-definition">
                             {% for category in page.taxonomies.categories %}
-                            <mark>{{ category }}</mark>
+                            {% set url = get_taxonomy_url(kind="categories", name=category) %}
+                            <a href="{{url}}"><span>{{ category }}</span></a>
                             {% endfor %}
                         </dd>
                         {% endif %}
                         {% if page.taxonomies.tags | length > 0 %}
-                        <dt class="tags-term">{{ macro_icon::icon(name="tag", size=icon_size) }}</dt>
+                        <dt class="tags-term">{{ macro_icon::icon(name="tag") }}</dt>
                         <dd class="tags-definition">
                             {% for tag in page.taxonomies.tags %}
-                            <mark>{{ tag }}</mark>
+                            {% set url = get_taxonomy_url(kind="tags", name=tag) %}
+                            <a href="{{url}}"><span>{{ tag }}</span></a>
                             {% endfor %}
                         </dd>
                         {% endif %}

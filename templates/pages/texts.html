@@ -3,23 +3,16 @@
 {% block main %}
 
     {% for tax in config.taxonomies %}
-    Taxonomy Name: {{ tax.name | capitalize }} <br>
-    {% set categories = get_taxonomy(kind=tax.name) %}
-    {% for name, items in categories %}
-        {% set length = items | length %}
-        {% if length > 0 %}
-        Total items: {{length}}
-        <br>
-        {% for item in items %}
+        {{ tax.name | capitalize }}: <br>
+        {% set categories = get_taxonomy(kind=tax.name) %}
+        {% for item in categories.items %}
             {% set url = get_taxonomy_url(kind=tax.name, name=item.name) %}
             <a href="{{url}}">{{item.name}}</a>
             <br>
         {% endfor %}
-        {% else %}
-        First Item: {{ items.name }}
-        {% endif %}
     {% endfor %}
-    {% endfor %}
+
+    <br>
 
     <section class="posts">
         <!-- {{ __tera_context }} -->

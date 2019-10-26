@@ -19,7 +19,7 @@
 
 <!-- TODO: Add title to svg for better aria https://css-tricks.com/accessible-svgs/-->
 
-{% macro icon(name, size=24, stroke_width=2, stroke="currentColor", fill="none") %}
+{% macro icon(name, size="1em", stroke_width=2, stroke="currentColor", fill="none") %}
 {% if name == "home" %}
 <svg viewBox="0 0 24 24" width="{{size}}" height="{{size}}" fill="{{fill}}" stroke="{{stroke}}"
     stroke-width="{{stroke_width}}" stroke-linecap="round" stroke-linejoin="round" role="img">
