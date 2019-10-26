@@ -19,15 +19,22 @@
     }
 
     article {
+        header {
+            padding-bottom: $spacing-1;
+        }
+        h3 {
+            font-size: $font-size-l;
+            font-weight: bold;
+        }
         dl {
-            display: grid;
-            grid-template-columns: auto auto auto auto 1fr;
-            grid-column-gap: $spacing-2;
             font-size: $font-size-s;
-            align-items: center;
-            .tags-term, .tags-definition {
-                grid-row: 2;
-            }
+            color: $font-color-descrete;
+        }
+        dt {
+            vertical-align: sub;
+        }
+        dt, dd {
+            display: inline;
         }
     }
 

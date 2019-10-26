@@ -1,0 +1,17 @@
+{% extends "root.html" %}
+{% import "macros/icons.html" as macro_icon %}
+
+{% block main %}
+<article class="post">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% set asset = page.assets[0] %}
+    <figure>
+        <img
+        src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}"
+        alt="{{ page.title }}"
+        />
+        <figcaption>{{ macro_icon::icon(name="calendar") }} {{ page.date }}</figcaption>
+    </figure>
+    {{ page.content | safe }}
+</article>
+{% endblock main %}

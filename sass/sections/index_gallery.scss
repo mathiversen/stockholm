@@ -1,6 +1,6 @@
 @import '../helpers/_.scss';
    
-#section-pictures {
+#section-gallery {
     background: rgb(245, 245, 245);
     @extend %section;
     
@@ -32,4 +32,21 @@
             }
         }
     }
+
+    figure {
+        position: relative;
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        background: rgba(255,255,255, 0.5);
+        padding: 0.2rem;
+        color: black;
+        width: 100%;
+        display: flex;
+        grid-gap: 0.5rem;
+        font-size: $font-size-s;
+    }
+       
 }

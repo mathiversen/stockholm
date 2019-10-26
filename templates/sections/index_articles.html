@@ -4,38 +4,38 @@
     <div class="content">
         <h2>Articles</h2>
         <ol>
-            {% set articles_Section = get_section(path="articles/_index.md") %}
-            {% for page in articles_Section.pages | sort(attribute="date") | reverse | slice(start=0, end=4) %}
+            {% set articles_section = get_section(path="articles/_index.md") %}
+            {% for page in articles_section.pages | slice(start=0, end=2) %}
             <li>
                 <article>
-                    <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-                    <dl>
-                        <dt>{{ macro_icon::icon(name="calendar") }}</dt>
-                        <dd><time>{{ page.date }}</time></dd>
-                        <dt>{{ macro_icon::icon(name="time") }}</dt>
-                        <dd><time>{{ page.reading_time }} min</time>, {{ page.word_count }} words.</dd>
-                    </dl>
-                    <p>{{ page.summary | truncate(length=150) | safe }}</p>
-                    <dl>
-                        {% if page.taxonomies.categories | length > 0 %}
-                        <dt class="tags-term">{{ macro_icon::icon(name="book-open") }}</dt>
-                        <dd class="tags-definition">
-                            {% for category in page.taxonomies.categories %}
-                            {% set url = get_taxonomy_url(kind="categories", name=category) %}
-                            <a href="{{url}}"><span>{{ category }}</span></a>
-                            {% endfor %}
-                        </dd>
-                        {% endif %}
-                        {% if page.taxonomies.tags | length > 0 %}
-                        <dt class="tags-term">{{ macro_icon::icon(name="tag") }}</dt>
-                        <dd class="tags-definition">
-                            {% for tag in page.taxonomies.tags %}
-                            {% set url = get_taxonomy_url(kind="tags", name=tag) %}
-                            <a href="{{url}}"><span>{{ tag }}</span></a>
-                            {% endfor %}
-                        </dd>
-                        {% endif %}
-                    </dl>
+                    <header>
+                        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+                        <dl>
+                            <dt>{{ macro_icon::icon(name="calendar") }}</dt>
+                            <dd><time>{{ page.date }}</time></dd>
+                            <dt>{{ macro_icon::icon(name="time") }}</dt>
+                            <dd><time>{{ page.reading_time }} min</time></dd>
+                            {% if page.taxonomies.categories | length > 0 %}
+                            <dt>{{ macro_icon::icon(name="book-open") }}</dt>
+                            <dd>
+                                {% for category in page.taxonomies.categories %}
+                                {% set url = get_taxonomy_url(kind="categories", name=category) %}
+                                <a href="{{url}}"><span>{{ category }}</span></a>
+                                {% endfor %}
+                            </dd>
+                            {% endif %}
+                            {% if page.taxonomies.tags | length > 0 %}
+                            <dt>{{ macro_icon::icon(name="tag") }}</dt>
+                            <dd>
+                                {% for tag in page.taxonomies.tags %}
+                                {% set url = get_taxonomy_url(kind="tags", name=tag) %}
+                                <a href="{{url}}"><span>{{ tag }}</span></a>
+                                {% endfor %}
+                            </dd>
+                            {% endif %}
+                        </dl>
+                    </header>
+                    <p>{{ page.summary | truncate(length=240) | safe }}</p>
                 </article>
             </li>
 
