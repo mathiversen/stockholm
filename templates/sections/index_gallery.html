@@ -8,20 +8,12 @@
             {% for page in gallery_section.pages | slice(start=0, end=4) %}
             {% set asset = page.assets[0] %}
                 <li>
-                    <a href="{{ page.permalink }}">
+                    <a href="{{ page.permalink }}" title="View gallery post">
                         <figure>
                             <img
                             src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}"
-                            alt=""
+                            alt="{{page.title}}. {{page.description}}"
                             />
-                            <figcaption>
-                                <h5>{{ page.title }}</h5>
-                                <p>{{ page.description }}</p>
-                                <dl>
-                                    <dt>{{ macro_icon::icon(name="calendar") }}</dt>
-                                    <dd>{{ page.date }}</dd>
-                                </dl>
-                            </figcaption>
                         </figure>
                     </a>
                 </li>
