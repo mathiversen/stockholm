@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="{{ config.base_url }}/sections/index_gallery.css">
 
-<section id="section-gallery" aria-label="gallery summary">
+<section id="section-gallery" aria-label="Gallery section">
     <div class="content">
-        <h2>Gallery</h2>
+        <h2>Latest gallery posts</h2>
         <ol>
             {% set gallery_section = get_section(path="gallery/_index.md") %}
             {% for page in gallery_section.pages | slice(start=0, end=4) %}
@@ -12,9 +12,16 @@
                         <figure>
                             <img
                             src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}"
-                            alt="{{ page.title }}"
+                            alt=""
                             />
-                            <figcaption>{{ macro_icon::icon(name="calendar") }} {{ page.date }}</figcaption>
+                            <figcaption>
+                                <h5>{{ page.title }}</h5>
+                                <p>{{ page.description }}</p>
+                                <dl>
+                                    <dt>{{ macro_icon::icon(name="calendar") }}</dt>
+                                    <dd>{{ page.date }}</dd>
+                                </dl>
+                            </figcaption>
                         </figure>
                     </a>
                 </li>
