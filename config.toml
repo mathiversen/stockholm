@@ -14,7 +14,7 @@ taxonomies = [
 [extra]
 name = "Mathias Iversen"
 occupation = "Software Developer"
-introduction = "Hello stranger! This is my small corner of the web. I'll use this website to showcase stuff that I do or, write or, take pictures of. Hope you enjoy it :)"
+introduction = "Hello stranger! This is my small corner of the web. I'll use this website to showcase stuff that I do, write, or take pictures of. Hope you enjoy it :)"
 social_links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},
@@ -27,5 +27,7 @@ navigation = [
     { url = "/articles", name = "Articles", icon = "file-text" },
     { url = "/gallery", name = "Gallery", icon = "image" },
 ]
-prefetch = "quicklink"
+preload = "viewport" # https://instant.page/v3
+theme_color = "#000000"
+scroll_nav = "show" # hide || show
 

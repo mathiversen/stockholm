@@ -8,7 +8,10 @@
         {% block head %}
         {% endblock head %}
     </head>
-    <body>
+    <body
+        data-instant-intensity="{{config.extra.preload}}"
+        data-scroll-nav="{{config.extra.scroll_nav}}"
+    >
         <noscript>
             <p><strong>JavaScript is not enabled.</strong> Some features may not work.</p>
         </noscript>
@@ -17,8 +20,8 @@
             {% endblock main %}
         </main>
         {% include "sections/nav.html" %}
+        {% block scripts %}
+        {% endblock scripts %}
         {% include "scripts.html" %}
-        {% block script %}
-        {% endblock script %}
     </body>
 </html>

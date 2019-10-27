@@ -8,6 +8,15 @@ html {
     @extend %font-html;
 }
 
+body {
+    &[data-scroll-nav="show"] {
+        padding-bottom: 50px;
+    }
+    &[data-scroll-nav="hide"] {
+        padding-bottom: 0px;
+    }
+}
+
 noscript {
     p {
         background: pink;
@@ -33,4 +42,15 @@ a, button {
 ::selection {
     color: black;
     background: lightblue;
-  }
+}
+
+.button {
+    display: inline-block;
+    padding: $spacing-2;
+    min-width: 120px;
+    text-align: center;
+    background: green;
+    color: white;
+    text-transform: uppercase;
+    font-size: $font-size-xs;
+}

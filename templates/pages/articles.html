@@ -1,40 +1,62 @@
 {% extends "root.html" %}
+{% import "macros/icons.html" as macro_icon %}
 
 {% block main %}
 
-    {% for tax in config.taxonomies %}
-        {{ tax.name | capitalize }}: <br>
-        {% set categories = get_taxonomy(kind=tax.name) %}
-        {% for item in categories.items %}
-            {% set url = get_taxonomy_url(kind=tax.name, name=item.name) %}
-            <a href="{{url}}">{{item.name}}</a>
-            <br>
-        {% endfor %}
+{% for tax in config.taxonomies %}
+{{ tax.name | capitalize }}: <br>
+{% set categories = get_taxonomy(kind=tax.name) %}
+{% for item in categories.items %}
+{% set url = get_taxonomy_url(kind=tax.name, name=item.name) %}
+<a href="{{url}}">{{item.name}}</a>
+<br>
+{% endfor %}
+{% endfor %}
+
+<br>
+
+<section class="posts">
+    <!-- {{ __tera_context }} -->
+    {% for page in paginator.pages %}
+    <article class="post">
+        <h2 class="post-title">
+            <a href="{{ page.permalink }}">
+                {{ page.title }}
+            </a>
+        </h2>
+        <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
+        <dl>
+            {% if page.taxonomies.categories | length > 0 %}
+            <dt>{{ macro_icon::icon(name="book-open") }}</dt>
+            <dd>
+                {% for category in page.taxonomies.categories %}
+                {% set url = get_taxonomy_url(kind="categories", name=category) %}
+                <a href="{{url}}"><span>{{ category }}</span></a>
+                {% endfor %}
+            </dd>
+            {% endif %}
+            {% if page.taxonomies.tags | length > 0 %}
+            <dt>{{ macro_icon::icon(name="tag") }}</dt>
+            <dd>
+                {% for tag in page.taxonomies.tags %}
+                {% set url = get_taxonomy_url(kind="tags", name=tag) %}
+                <a href="{{url}}"><span>{{ tag }}</span></a>
+                {% endfor %}
+            </dd>
+            {% endif %}
+
+        </dl>
+        {% if page.summary %}
+        <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
+        {% endif %}
+    </article>
     {% endfor %}
 
-    <br>
-
-    <section class="posts">
-        <!-- {{ __tera_context }} -->
-        {% for page in paginator.pages | sort(attribute="date") %}
-            <article class="post">
-                <h2 class="post-title">
-                    <a href="{{ page.permalink }}">
-                        {{ page.title }}
-                    </a>
-                </h2>
-                <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
-                {% if page.summary %}
-                <p class="post-summary">{{ page.summary | safe | striptags | truncate(length=200) }}</p>
-                {% endif %}
-            </article>
-        {% endfor %}
-        
-        {% if paginator.current_index > 1 %}
-            <a href="{{ paginator.previous }}">Previous</a>
-        {% endif %}
-        {% if paginator.current_index != paginator.number_pagers %}
-            <a href="{{ paginator.next }}">Next</a>
-        {% endif %}
-    </section>
+    {% if paginator.current_index > 1 %}
+    <a href="{{ paginator.previous }}">Previous</a>
+    {% endif %}
+    {% if paginator.current_index != paginator.number_pagers %}
+    <a href="{{ paginator.next }}">Next</a>
+    {% endif %}
+</section>
 {% endblock main %}

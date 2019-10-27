@@ -1,24 +1,5 @@
-{% if config.extra.prefetch == "quicklink" %}
-<script src="https://unpkg.com/quicklink@1.0.1/dist/quicklink.umd.js"></script>
-<script>
-    window.addEventListener('load', () => {
-        console.log(quicklink)
-        quicklink.listen();
-    });
-</script>
-{% elif config.extra.prefetch == "instant" %}
-<script src="https://instant.page/2.0.0" type="module" defer
-    integrity="sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8"></script>
+<script src="js/hide-nav.js" defer></script>
+
+{% if config.extra.preload != "" %}
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 {% endif %}
-<script>
-    var prevPos = window.pageYOffset;
-    window.onscroll = function() {
-    var currPos = window.pageYOffset;
-        if (prevPos > currPos) {
-        document.getElementById("section-nav").style.transform = "translateY(0)";
-        } else {
-        document.getElementById("section-nav").style.transform = "translateY(100%)";
-        }
-        prevPos = currPos;
-    }
-</script>
