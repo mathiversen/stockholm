@@ -1,5 +1,6 @@
 +++
 title = "A City Hall"
+description = "Some short description of the picture"
 date = 2019-09-02
 transparent = true
 +++

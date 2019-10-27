@@ -1,5 +1,6 @@
 +++
 title = "A Sea"
+description = "Some short description of the picture"
 date = 2019-09-04
 transparent = true
 +++
