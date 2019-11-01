@@ -18,48 +18,42 @@ $font-color-descrete: rgba(0,0,0,0.6);
 
 // Fonts
 %font-sans {
-    font-family: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif'
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 %font-serif {
-    font-family: 'Georgia, Cambria, "Times New Roman", Times, serif'
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 %font-mono {
-    font-family: 'Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;'
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 // Default text
 %font-html {
     font-size: 18px;
-    line-height: 1.3;
-    @extend %font-serif;
+    @extend %font-sans;
 }
 
 // Page titles
 %font-page-title {
     font-size: $font-size-2xl;
-    line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    @extend %font-sans;
 }
 
 %font-page-subtitle {
     font-size: $font-size;
-    line-height: 1.5;
     text-align: center;
 }
 
 // Section titles
 %font-section-title {
     font-size: $font-size-2xl;
-    line-height: 1.5;
     text-decoration-style: dotted;
     padding-bottom: $spacing-5;
     font-weight: bold;
-    @extend %font-sans;
 }
 
 %font-section-subtitle {

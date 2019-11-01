@@ -1,9 +1,22 @@
 {% extends "root.html" %}
+{% import "macros/icons.html" as macro_icon %}
+
+{% block title %}
+{{ page.title }}
+{% endblock title %}
 
 {% block main %}
-<article class="post">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+<article>
+    <header>
+        <h3>{{ page.title }}</h3>
+        <dl>
+            <dt>{{ macro_icon::icon(name="calendar") }}</dt>
+            <dd><time>{{ page.date }}</time></dd>
+            <dt>{{ macro_icon::icon(name="time") }}</dt>
+            <dd><time>{{ page.reading_time }} min</time></dd>
+        </dl>
+    </header>
     {{ page.content | safe }}
+    <!-- <a class="button" href="{{ page.permalink }}">Read more</a> -->
 </article>
 {% endblock main %}

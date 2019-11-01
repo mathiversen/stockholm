@@ -14,7 +14,7 @@ taxonomies = [
 [extra]
 name = "Mathias Iversen"
 occupation = "Software Developer"
-introduction = "Hello stranger! This is my small corner of the web. I'll use this website to showcase stuff that I do, write, or take pictures of. Hope you enjoy it :)"
+introduction = "Hello stranger! This is my small corner of the web and I use it to showcase random stuff I've done, written or captured in pixels. Enjoy your stay!"
 social_links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},

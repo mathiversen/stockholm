@@ -29,15 +29,17 @@
         dl {
             font-size: $font-size-s;
             color: $font-color-descrete;
-        }
-        dt {
-            vertical-align: sub;
-        }
-        dt, dd {
-            display: inline;
+            display: grid;
+            grid-gap: 5px;
+            grid-auto-flow: column;
+            justify-content: left;
+            align-items: center;
         }
         p {
             margin-bottom: $spacing-4;
+            column-width: 300px;
+            column-gap: $spacing-10;
+            text-align: justify;
         }
     }
 
