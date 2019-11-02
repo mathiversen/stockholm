@@ -7,7 +7,7 @@ function hideShowNav () {
     let navOnScroll = document.body.getAttribute("data-scroll-nav")
     switch (navOnScroll) {
         case "show":
-            document.body.style.paddingBottom = "50px"
+            document.body.style.paddingBottom = "45px"
             window.removeEventListener('scroll', onScroll)
             break;
         case "hide":

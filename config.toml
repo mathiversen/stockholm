@@ -12,22 +12,30 @@ taxonomies = [
 ]
 
 [extra]
-name = "Mathias Iversen"
-occupation = "Software Developer"
-introduction = "Hello stranger! This is my small corner of the web and I use it to showcase random stuff I've done, written or captured in pixels. Enjoy your stay!"
+# Theme
+theme_color = "#000000"
+
+# Hero
+name = "Sven Svensson"
+occupation = "Bit Wrangler"
+introduction = "Welcome! This is a Zola site using the Stockholm theme. Have a look around and see if you like it :)"
 social_links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},
     { url = "https://github.com/", icon = "github"},
     { url = "https://linkedin.com/", icon = "linkedin"},
 ]
+hero_bg_alt = "Description of background image"
+
+# Nav
 navigation = [
     { url = "/", name = "Home", icon = "home" },
     { url = "/about", name = "About", icon = "user" },
     { url = "/articles", name = "Articles", icon = "file-text" },
     { url = "/gallery", name = "Gallery", icon = "image" },
 ]
+
+# Javascript enhancements
 preload = "viewport" # https://instant.page/v3
-theme_color = "#000000"
 scroll_nav = "show" # hide || show
 

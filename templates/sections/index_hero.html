@@ -1,12 +1,14 @@
 <link rel="stylesheet" href="{{ config.base_url }}/sections/index_hero.css">
 
 <section id="section-hero" aria-label="Hero section">
-    <div class="hero-bg"></div>
+    <picture class="background">
+        <img src="{{ get_url(path='img/hero_bg.jpg') }}" alt="{{config.extra.hero_bg_alt}}" >        
+    </picture>
     <div class="content">
         <header>
-            <a href="{{get_url(path='rss.xml')}}">{{ macro_icon::icon(name="rss", size="1.7em") }}Rss</a>
+            <a href="{{get_url(path='rss.xml')}}">{{ macro_icon::icon(name="rss", size="2em") }}Rss</a>
             <a href="/"><img src="{{ get_url(path='logo/safari-pinned-tab.svg') }}" width="32px" height="auto" alt="Site Logo"></a>
-            <a href="#">{{ macro_icon::icon(name="info", size="1.7em") }}Info</a>
+            <a href="#">{{ macro_icon::icon(name="info", size="2em") }}Info</a>
         </header>
         <div class="center">
             <picture>
