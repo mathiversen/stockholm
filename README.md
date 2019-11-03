@@ -7,3 +7,6 @@ https://www.getzola.org/
 ### Logo
 Replace existing files under static/logo & change name in site.webmanifest & browserconfig.xml
 - https://realfavicongenerator.net/
+
+## Credits
+BG = Photo by Romain Lohezic on Unsplash

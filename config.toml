@@ -18,7 +18,7 @@ theme_color = "#000000"
 # Hero
 name = "Sven Svensson"
 occupation = "Bit Wrangler"
-introduction = "Welcome! This is a Zola site using the Stockholm theme. Have a look around and see if you like it :)"
+introduction = "Welcome! This site is built using the static site generator Zola together with the Stockholm theme. Have a look around and see if you like it :)"
 social_links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},

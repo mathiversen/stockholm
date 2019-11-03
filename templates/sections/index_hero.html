@@ -2,17 +2,22 @@
 
 <section id="section-hero" aria-label="Hero section">
     <picture class="background">
-        <img src="{{ get_url(path='img/hero_bg.jpg') }}" alt="{{config.extra.hero_bg_alt}}" >        
+        {% set path = '../static/img/hero_bg.jpg' %}
+        <source srcset="{{resize_image(path=path, width=1400, height=700, quality=85)}}" media="(min-width: 1400px)">
+        <source srcset="{{resize_image(path=path, width=1000, height=500, quality=85)}}" media="(min-width: 900px)">
+        <source srcset="{{resize_image(path=path, width=700, height=350, quality=85)}}" media="(min-width: 500px)">
+        <img src="{{ resize_image(path=path, width=500, height=250, quality=85) }}" alt="{{config.extra.hero_bg_alt}}" >        
     </picture>
     <div class="content">
         <header>
             <a href="{{get_url(path='rss.xml')}}">{{ macro_icon::icon(name="rss", size="2em") }}Rss</a>
-            <a href="/"><img src="{{ get_url(path='logo/safari-pinned-tab.svg') }}" width="32px" height="auto" alt="Site Logo"></a>
             <a href="#">{{ macro_icon::icon(name="info", size="2em") }}Info</a>
         </header>
         <div class="center">
             <picture>
-                <img src="{{ get_url(path='img/profile.jpeg') }}" alt="Profile picture">
+                {% set path = '../static/img/profile.jpeg' %}
+                <source srcset="{{resize_image(path=path, width=210, height=210, quality=90, op='fit')}}" media="(min-width: 500px)">
+                <img src="{{ resize_image(path=path, width=170, height=170, quality=90, op='fit') }}" alt="Profile picture">
             </picture>
             <h1>{{ config.extra.name }}</h1>
             <h5>{{ config.extra.occupation }}</h5>
