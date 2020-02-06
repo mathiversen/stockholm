@@ -1,28 +1,31 @@
-<link rel="stylesheet" href="{{ config.base_url }}/sections/index_articles.css">
+<link
+	rel="stylesheet"
+	href="{{ config.base_url }}/sections/index_articles.css"
+/>
 
-<section id="section-articles" aria-label="Articles section">
-    <div class="content">
-        <h2>Latest articles</h2>
-        <ol>
-            {% set articles_section = get_section(path="articles/_index.md") %}
-            {% for page in articles_section.pages | slice(start=0, end=2) %}
-            <li>
-                <article>
-                    <header>
-                        <h3>{{ page.title }}</h3>
-                        <dl>
-                            <dt>{{ macro_icon::icon(name="calendar") }}</dt>
-                            <dd><time>{{ page.date }}</time></dd>
-                            <dt>{{ macro_icon::icon(name="time") }}</dt>
-                            <dd><time>{{ page.reading_time }} min</time></dd>
-                        </dl>
-                    </header>
-                    {{ page.summary | safe }}
-                    <a class="button" href="{{ page.permalink }}">Read more</a>
-                </article>
-            </li>
+<section class="section-articles" aria-label="Articles section">
+	<div class="content">
+		<h2>Latest articles</h2>
+		<ol>
+			{% set articles_section = get_section(path="articles/_index.md") %} {% for
+			page in articles_section.pages | slice(start=0, end=2) %}
+			<li>
+				<article>
+					<header>
+						<h3>{{ page.title }}</h3>
+						<dl>
+							<dt>{{ macro_icon::icon(name="calendar") }}</dt>
+							<dd><time>{{ page.date }}</time></dd>
+							<dt>{{ macro_icon::icon(name="time") }}</dt>
+							<dd><time>{{ page.reading_time }} min</time></dd>
+						</dl>
+					</header>
+					{{ page.summary | safe }}
+					<a class="button" href="{{ page.permalink }}">Read more</a>
+				</article>
+			</li>
 
-            {% endfor %}
-        </ol>
-    </div>
+			{% endfor %}
+		</ol>
+	</div>
 </section>

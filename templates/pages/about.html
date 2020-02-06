@@ -1,15 +1,4 @@
-{% extends "root.html" %}
-
-{% block title %}
-    {{ page.title }}
-{% endblock title%}
-
+{% extends "root.html" %} {% block title %} {{ page.title }} {% endblock title%}
 {% block main %}
-<section class="about">
-    <div class="content">
-        <h1>{{ page.title }}</h1>
-        {{ page.content | safe }}
-    </div>
-</section>
-
-{% endblock main %}
+<h1>{{ page.title }}</h1>
+{{ page.content | safe }} {% endblock main %}

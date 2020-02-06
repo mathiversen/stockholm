@@ -1,32 +1,33 @@
-<link rel="stylesheet" href="{{ config.base_url }}/sections/index_gallery.css">
+<link
+	rel="stylesheet"
+	href="{{ config.base_url }}/sections/index_gallery.css"
+/>
 
-<section id="section-gallery" aria-label="Gallery section">
-    <div class="content">
-        <h2>Latest gallery posts</h2>
-        <ol>
-            {% set gallery_section = get_section(path="gallery/_index.md") %}
-            {% for page in gallery_section.pages | slice(start=0, end=4) %}
-            {% set asset = page.assets[0] %}
-                <li>
-                    <figure>
-                        <picture>
-                            <img
-                            src="{{ resize_image(path=asset, width=300, height=300, op="fill") }}"
-                            alt="{{page.title}}. {{page.description}}"
-                            />
-                        </picture>
-                        <a href="{{ page.permalink }}">
-                            Go to post
-                        </a>
-                        <figcaption>
-                            <dl>
-                                <dt>{{ macro_icon::icon(name="calendar") }}</dt>
-                                <dd><time>{{ page.date }}</time></dd>
-                            </dl>       
-                        </figcaption>
-                    </figure>
-                </li>
-            {% endfor %}
-        </ol>
-    </div>
+<section class="section-gallery" aria-label="Gallery section">
+	<div class="content">
+		<h2>Latest gallery posts</h2>
+		<ol>
+			{% set gallery_section = get_section(path="gallery/_index.md") %} {% for
+			page in gallery_section.pages | slice(start=0, end=4) %} {% set asset =
+			page.assets[0] %}
+			<li>
+				<figure>
+					<picture>
+						<img src="{{ resize_image(path=asset, width=300, height=300,
+						op="fill") }}" alt="{{page.title}}. {{page.description}}" />
+					</picture>
+					<a href="{{ page.permalink }}">
+						Go to post
+					</a>
+					<figcaption>
+						<dl>
+							<dt>{{ macro_icon::icon(name="calendar") }}</dt>
+							<dd><time>{{ page.date }}</time></dd>
+						</dl>
+					</figcaption>
+				</figure>
+			</li>
+			{% endfor %}
+		</ol>
+	</div>
 </section>

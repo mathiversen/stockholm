@@ -1,13 +1,18 @@
 {% import "macros/icons.html" as macro_icon %}
 
-<link rel="stylesheet" href="{{ config.base_url }}/sections/nav.css">
+<link rel="stylesheet" href="{{ config.base_url }}/sections/nav.css" />
 
-<nav id="section-nav" aria-label="Main navigation">
-    <ul>
-        {% block sidebar_nav %}
-            {% for link in config.extra.navigation %}
-                <li><a href="{{link.url}}" id="link-{{link.name | slugify}}" tabindex="{{loop.index}}">{{ macro_icon::icon(name=link.icon, size="1.7em") }}{{link.name}}</a></li>
-            {% endfor %}
-        {% endblock sidebar_nav %}
-    </ul>
+<nav class="section-nav" aria-label="Main navigation">
+	<ul>
+		{% block sidebar_nav %} {% for link in config.extra.navigation %}
+		<li>
+			<a
+				href="{{link.url}}"
+				id="link-{{link.name | slugify}}"
+				tabindex="{{loop.index}}"
+				>{{ macro_icon::icon(name=link.icon, size="1.7em") }}{{link.name}}</a
+			>
+		</li>
+		{% endfor %} {% endblock sidebar_nav %}
+	</ul>
 </nav>

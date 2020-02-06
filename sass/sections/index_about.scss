@@ -1,15 +1,15 @@
 @import '../helpers/_.scss';
-   
-#section-about {
-    background: rgb(245, 245, 245);
-    @extend %section;
 
-    .content {
-        @extend %content-960;
-        @extend %content-padding;
-    }
+.section-about {
+	background: rgb(245, 245, 245);
+	@extend %section;
 
-    h2 {
-        @extend %font-section-title;
-    }
+	.content {
+		@extend %content-960;
+		@extend %content-padding;
+	}
+
+	h2 {
+		@extend %font-section-title;
+	}
 }

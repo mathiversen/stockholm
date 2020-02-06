@@ -12,9 +12,9 @@
 
 %section {
 	padding: 0 $spacing-4;
-    @media (min-width: $screen-s) {
-        padding: 0 $spacing-8;
-    }
+	@media (min-width: $screen-s) {
+		padding: 0 $spacing-8;
+	}
 }
 
 %visually-hidden {
