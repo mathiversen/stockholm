@@ -1,8 +1,9 @@
 :root {
-	--color-primary: green;
-	--color-background: white;
-	--color-foreground: black;
-	--color-secondary: pink;
+	--color-primary: rgb(0, 128, 0);
+	--color-background: rgb(255, 255, 255);
+	--color-foreground: rgb(0, 0, 0);
+	--color-secondary: rgb(255, 192, 203);
+	--color-shadow: rgba(0, 0, 0, 0.1);
 }
 
 // Spacing
