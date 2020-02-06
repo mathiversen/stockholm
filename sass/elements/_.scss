@@ -1,0 +1,9 @@
+@import '_a.scss';
+@import '_button.scss';
+@import '_body.scss';
+@import '_noscript.scss';
+
+a,
+button {
+	-webkit-tap-highlight-color: transparent; // Note: Fix chrome select color
+}

@@ -1,0 +1,11 @@
+noscript {
+	p {
+		background: var(--color-secondary);
+		text-align: center;
+		padding: 0.3rem;
+		font-size: $font-size-s;
+		strong {
+			font-weight: bold;
+		}
+	}
+}

@@ -25,7 +25,7 @@ social_links = [
     { url = "https://linkedin.com/", icon = "linkedin"},
 ]
 introduction = "Welcome! This site is built with the static site generator Zola using the Stockholm theme. Have a look around, and hope you like it :)"
-hero_bg_alt = "Description of background image"
+hero_background_alt = "Description of background image"
 
 # Nav
 navigation = [

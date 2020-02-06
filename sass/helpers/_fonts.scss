@@ -12,60 +12,61 @@ $font-size-5xl: 3rem;
 $font-size-6xl: 4rem;
 
 // Colors
-$font-color: rgba(0,0,0,0.9);
-$font-color-inverted: rgba(255,255,255, 0.9);
-$font-color-descrete: rgba(0,0,0,0.6);
+$font-color-inverted: rgba(255, 255, 255, 0.9);
+$font-color-descrete: rgba(0, 0, 0, 0.6);
 
 // Fonts
 %font-sans {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 %font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
 %font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+		monospace;
 }
 
 // Default text
 %font-html {
-    font-size: 18px;
-    @extend %font-sans;
+	font-size: 18px;
+	@extend %font-sans;
 }
 
 // Page titles
 %font-page-title {
-    font-size: $font-size-2xl;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
+	font-size: $font-size-2xl;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 %font-page-subtitle {
-    font-size: $font-size;
-    text-align: center;
+	font-size: $font-size;
+	text-align: center;
 }
 
 // Section titles
 %font-section-title {
-    font-size: $font-size-2xl;
-    text-decoration-style: dotted;
-    padding-bottom: $spacing-5;
-    font-weight: bold;
+	font-size: $font-size-2xl;
+	text-decoration-style: dotted;
+	padding-bottom: $spacing-5;
+	font-weight: bold;
 }
 
 %font-section-subtitle {
-    color: $font-color-descrete;
+	color: $font-color-descrete;
 }
 
 // Buttons & inputs
 %font-label {
-    color: currentColor;
-    font-size: $font-size-xxs;
-    text-decoration: none;
-    text-transform: uppercase;
-    grid-gap: $spacing-1; // TODO: Variable
+	color: currentColor;
+	font-size: $font-size-xxs;
+	text-decoration: none;
+	text-transform: uppercase;
+	grid-gap: $spacing-1; // TODO: Variable
 }
-

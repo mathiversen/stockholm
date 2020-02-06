@@ -1,0 +1,12 @@
+@import '../helpers/_.scss';
+
+a {
+	color: inherit;
+	text-decoration: none;
+	&.button {
+		@extend %button;
+	}
+	&.button-primary {
+		@extend %button-primary;
+	}
+}
