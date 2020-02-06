@@ -16,8 +16,8 @@ taxonomies = [
 theme_color = "#000000"
 
 # Hero
-name = "Sven Svensson"
-occupation = "Bit Wrangler"
+name = "Stockholm"
+occupation = "A Zola theme"
 social_links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},

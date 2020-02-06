@@ -50,9 +50,10 @@
 				</li>
 				{% endfor %}
 			</ul>
-			{% if config.extra.introduction %}
+			{% set about_page = get_page(path="about.md")%} {% if about_page.summary
+			%}
 			<blockquote>
-				{{ config.extra.introduction }}
+				{{ about_page.summary | safe }}
 			</blockquote>
 			{% endif %}
 		</div>

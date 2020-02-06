@@ -1,6 +1,7 @@
 @import '../helpers/_.scss';
 
 .section-articles {
+	background-color: #eee;
 	@extend %section;
 
 	.content {
