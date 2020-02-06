@@ -1,6 +1,4 @@
 {% extends "root.html" %} {% import "macros/icons.html" as macro_icon %} {%
 block main %} {% include "sections/index_hero.html" %} {% set about_page =
-get_page(path="about.md")%} {% if about_page.summary %} {% include
-"sections/index_about.html" %} {% endif %} {% include
-"sections/index_articles.html" %} {% include "sections/index_gallery.html" %} {%
-endblock main %}
+get_page(path="about.md")%} {% include "sections/index_articles.html" %} {%
+include "sections/index_gallery.html" %} {% endblock main %}
