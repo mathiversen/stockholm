@@ -6,14 +6,17 @@
 		<source
 			srcset="{{resize_image(path=path, width=1400, height=700, quality=85)}}"
 			media="(min-width: 1400px)"
+			aria-hidden="true"
 		/>
 		<source
 			srcset="{{resize_image(path=path, width=1000, height=500, quality=85)}}"
 			media="(min-width: 900px)"
+			aria-hidden="true"
 		/>
 		<source
 			srcset="{{resize_image(path=path, width=700, height=350, quality=85)}}"
 			media="(min-width: 500px)"
+			aria-hidden="true"
 		/>
 		<img
 			src="{{ resize_image(path=path, width=500, height=250, quality=85) }}"
@@ -21,10 +24,8 @@
 		/>
 	</picture>
 	<div class="content">
-		<header>
-			<a href="{{get_url(path='rss.xml')}}"
-				>{{ macro_icon::icon(name="rss", size="2em") }}Rss</a
-			>
+		<header aria-label="Shortcut links">
+			<a href="{{get_url(path='rss.xml')}}">{{ macro_icon::icon(name="rss", size="2em") }}Rss</a>
 			<a href="#">{{ macro_icon::icon(name="cog", size="2em") }}Edit</a>
 		</header>
 		<div class="center">
@@ -50,8 +51,7 @@
 				</li>
 				{% endfor %}
 			</ul>
-			{% set about_page = get_page(path="about.md")%} {% if about_page.summary
-			%}
+			{% set about_page = get_page(path="about.md")%} {% if about_page.summary %}
 			<blockquote>
 				{{ about_page.summary | safe }}
 			</blockquote>

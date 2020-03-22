@@ -1,4 +1,8 @@
-{% extends "root.html" %} {% block title %} {{ page.title }} {% endblock title%}
+{% extends "root.html" %}
+{% block title %}
+    {{ page.title }}
+{% endblock title%}
 {% block main %}
-<h1>{{ page.title }}</h1>
-{{ page.content | safe }} {% endblock main %}
+    <h1>{{ page.title }}</h1>
+    {{ page.content | safe }}
+{% endblock main %}
