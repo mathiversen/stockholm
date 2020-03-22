@@ -4,7 +4,9 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{% block title %}{{ config.title }}{% endblock title %}</title>
-		{% include "head.html" %} {% block head %} {% endblock head %}
+		{% include "head.html" %}
+		{% block head %}
+		{% endblock head %}
 	</head>
 	<body
 		data-instant-intensity="{{config.extra.preload}}"
@@ -24,6 +26,7 @@
 		<main id="main" aria-label="Main content">
 			{% block main %} {% endblock main %}
 		</main>
+		{% include "sections/copyright.html" %}
 		{% include "sections/nav.html" %} {% block scripts %} {% endblock scripts %}
 		{% include "scripts.html" %}
 	</body>

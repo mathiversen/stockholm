@@ -2,11 +2,13 @@
 
 a {
 	color: inherit;
-	text-decoration: none;
+	text-decoration: underline;
 	&.button {
+		text-decoration: none;
 		@extend %button;
 	}
 	&.button-primary {
+		text-decoration: none;
 		@extend %button-primary;
 	}
 }
