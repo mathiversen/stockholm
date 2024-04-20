@@ -7,7 +7,6 @@ highlight_code = false
 build_search_index = false
 
 taxonomies = [
-    { name = "categories" },
     { name = "tags" }
 ]
 
@@ -18,11 +17,12 @@ theme_color = "#000000"
 # Hero
 name = "Stockholm"
 occupation = "A Zola theme"
-social_links = [
+links = [
     { url = "https://www.facebook.com", icon = "facebook"},
     { url = "https://twitter.com/", icon = "twitter"},
     { url = "https://github.com/", icon = "github"},
     { url = "https://linkedin.com/", icon = "linkedin"},
+    { url = "/rss.xml", icon = "rss"},
 ]
 introduction = "Welcome! This site is built with the static site generator Zola using the Stockholm theme. Have a look around, and hope you like it :)"
 hero_background_alt = "Description of background image"

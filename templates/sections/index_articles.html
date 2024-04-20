@@ -7,8 +7,8 @@
 	<div class="content">
 		<h2>Latest articles</h2>
 		<ol>
-			{% set articles_section = get_section(path="articles/_index.md") %}{% for
-			page in articles_section.pages | slice(start=0, end=2) %}
+			{% set articles_section = get_section(path="articles/_index.md") %}
+			{% for page in articles_section.pages | slice(start=0, end=2) %}
 			<li>
 				<article>
 					<header>
@@ -22,6 +22,9 @@
 					</header>
 					{{ page.summary | safe }}
 					<a class="button-primary" href="{{ page.permalink }}">Read more</a>
+					{% for key, value in page.taxonomies %}
+						{{ key }}: {{ value }}<br>
+					{% endfor %}
 				</article>
 			</li>
 

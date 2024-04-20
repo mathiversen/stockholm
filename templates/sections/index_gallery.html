@@ -13,8 +13,8 @@
 			<li>
 				<figure>
 					<picture>
-						<img src="{{ resize_image(path=asset, width=300, height=300,
-						op="fill") }}" alt="{{page.title}}. {{page.description}}" />
+						{% set img = resize_image(path=asset, width=300, height=300, op="fill", format="webp") %}
+						<img src="{{ img.url }}" alt="{{page.title}}. {{page.description}}" />
 					</picture>
 					<a href="{{ page.permalink }}">
 						Go to post

@@ -24,10 +24,13 @@
 			</p>
 		</noscript>
 		<main id="main" aria-label="Main content">
-			{% block main %} {% endblock main %}
+			{% block main %}
+			{% endblock main %}
 		</main>
+
 		{% include "sections/copyright.html" %}
-		{% include "sections/nav.html" %} {% block scripts %} {% endblock scripts %}
+		{% include "sections/nav.html" %}
+		{% block scripts %} {% endblock scripts %}
 		{% include "scripts.html" %}
 	</body>
 </html>

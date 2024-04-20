@@ -3,47 +3,49 @@
 <section class="section-hero" aria-label="Hero section">
 	<picture class="background">
 		{% set path = '../static/img/hero_bg.jpg' %}
+		{% set xl = resize_image(path=path, width=1400, height=700, quality=85, format='webp') %}
+		{% set l = resize_image(path=path, width=1000, height=500, quality=85, format='webp') %}
+		{% set m = resize_image(path=path, width=700, height=350, quality=85, format='webp') %}
+		{% set s = resize_image(path=path, width=500, height=250, quality=85, format='webp') %}
 		<source
-			srcset="{{resize_image(path=path, width=1400, height=700, quality=85)}}"
+			srcset="{{ xl.url }}"
 			media="(min-width: 1400px)"
 			aria-hidden="true"
 		/>
 		<source
-			srcset="{{resize_image(path=path, width=1000, height=500, quality=85)}}"
+			srcset="{{ l.url }}"
 			media="(min-width: 900px)"
 			aria-hidden="true"
 		/>
 		<source
-			srcset="{{resize_image(path=path, width=700, height=350, quality=85)}}"
+			srcset="{{ m.url }}"
 			media="(min-width: 500px)"
 			aria-hidden="true"
 		/>
 		<img
-			src="{{ resize_image(path=path, width=500, height=250, quality=85) }}"
+			src="{{ s.url }}"
 			alt="{{config.extra.hero_background_alt}}"
 		/>
 	</picture>
 	<div class="content">
-		<header aria-label="Shortcut links">
-			<a href="{{get_url(path='rss.xml')}}">{{ macro_icon::icon(name="rss", size="2em") }}Rss</a>
-			<a href="#">{{ macro_icon::icon(name="cog", size="2em") }}Edit</a>
-		</header>
 		<div class="center">
 			<picture>
 				{% set path = '../static/img/profile.jpeg' %}
+				{% set l = resize_image(path=path, width=210, height=210, quality=90, op='fit', format='webp') %}
+				{% set s = resize_image(path=path, width=170, height=170, quality=90, op='fit', format='webp') %}
 				<source
-					srcset="{{resize_image(path=path, width=210, height=210, quality=90, op='fit')}}"
+					srcset="{{ l.url }}"
 					media="(min-width: 500px)"
 				/>
 				<img
-					src="{{ resize_image(path=path, width=170, height=170, quality=90, op='fit') }}"
+					src="{{ s.url }}"
 					alt="Profile picture"
 				/>
 			</picture>
 			<h1>{{ config.extra.name }}</h1>
 			<h5>{{ config.extra.occupation }}</h5>
 			<ul aria-label="Social links">
-				{% for link in config.extra.social_links %}
+				{% for link in config.extra.links %}
 				<li>
 					<a href="{{link.url}}" title="{{link.icon | capitalize}} link"
 						>{{ macro_icon::icon(name=link.icon, size=18) }}</a

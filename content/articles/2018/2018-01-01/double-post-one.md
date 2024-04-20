@@ -3,7 +3,6 @@ template = "pages/article.html"
 title = "Two posts on the same day 1"
 date = 2018-01-01
 [taxonomies]
-categories = ["programming"]
 tags = ["rust", "web"]
 +++
 

@@ -4,13 +4,13 @@
 {% block main %}
 
 {% for tax in config.taxonomies %}
-{{ tax.name | capitalize }}: <br>
-{% set categories = get_taxonomy(kind=tax.name) %}
-{% for item in categories.items %}
-{% set url = get_taxonomy_url(kind=tax.name, name=item.name) %}
-<a href="{{url}}">{{item.name}}</a>
-<br>
-{% endfor %}
+    {{ tax.name | capitalize }}: <br>
+    {% set categories = get_taxonomy(kind=tax.name) %}
+    {% for item in categories.items %}
+    {% set url = get_taxonomy_url(kind=tax.name, name=item.name) %}
+    <a href="{{url}}">{{item.name}}</a>
+    <br>
+    {% endfor %}
 {% endfor %}
 
 <br>
@@ -26,15 +26,6 @@
         </h2>
         <p class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</p>
         <dl>
-            {% if page.taxonomies.categories | length > 0 %}
-            <dt>{{ macro_icon::icon(name="book-open") }}</dt>
-            <dd>
-                {% for category in page.taxonomies.categories %}
-                {% set url = get_taxonomy_url(kind="categories", name=category) %}
-                <a href="{{url}}"><span>{{ category }}</span></a>
-                {% endfor %}
-            </dd>
-            {% endif %}
             {% if page.taxonomies.tags | length > 0 %}
             <dt>{{ macro_icon::icon(name="tag") }}</dt>
             <dd>
